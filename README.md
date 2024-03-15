@@ -1,6 +1,8 @@
 # Spacestation Unity & FMOD
 
 ## GETTING STARTED
+This repository is essentially a replacement for the `Assets` folder in the Unity project.
+
 1. First, download the Unity project from [here](https://drive.google.com/file/d/1XNen4gFheBeZbtGHJ5yFNtuQo3f7jpkH/view?usp=drive_link) (FMOD project included).
 2. Completely delete the `Assets` folder in the downloaded Unity project folder.
 3. Next, clone this repository into the **same folder you just downloaded**.
