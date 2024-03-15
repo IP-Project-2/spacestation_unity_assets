@@ -2,11 +2,14 @@
 
 ## GETTING STARTED
 1. First, download the Unity project from [here](https://drive.google.com/file/d/1XNen4gFheBeZbtGHJ5yFNtuQo3f7jpkH/view?usp=drive_link) (FMOD project included).
-2. Next, clone this repository into the **same folder you just downloaded**. See the below video tutorial:
-    - [Using GitHub Desktop video tutorial]()
-    <!-- - [Using the command line video tutorial]() (harder method). -->
+2. Completely delete the `Assets` folder in the downloaded Unity project folder.
+3. Next, clone this repository into the **same folder you just downloaded**.
+4. Rename the cloned folder from `spacestation_unity_assets` to `Assets`.
+5. Finally, relocate the repository (if you're using GitHub Desktop).
 
-This repository tracks the FMOD project, scripts, and the Unity scene. It ignores the FMOD plugin, Google Resonance, FMOD soundbanks, and other Unity stuff (like textures/materials, etc.).
+[See this video tutorial on the above.](https://drive.google.com/file/d/16hUuWjuza5-eHwe0eENf7sL2M5m9uQX3/view?usp=drive_link)
+
+This repository tracks the FMOD project, scripts, and the Unity scene. It ignores the FMOD plugin, Google Resonance, FMOD soundbanks, and other Unity stuff (like textures/materials, etc.), so you can freely change them once Git is set up if you need to.
 
 ## Using Git
 #### Adding changes
