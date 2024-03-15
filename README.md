@@ -19,6 +19,8 @@ When you've made changes to a file, the process is:
 2. *Commit* your changes — think of a "commit" as a checkpoint. Making a commit saves a checkpoint on **your** computer. You can make as many commits as you want.
 3. *Push* your commit(s), meaning "upload my checkpoint(s) to a GitHub branch".
 
+This process may be slightly simpler in the GitHub Desktop app.
+
 #### Downloading changes
 When someone else has made changes, you must *pull* their changes, meaning "download from a GitHub branch to my computer". We likely won't have to do this very often and can manage it in a meeting.
 
