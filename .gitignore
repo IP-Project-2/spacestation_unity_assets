@@ -145,4 +145,4 @@ fmod_editor.log
 /ResonanceAudio
 /ResonanceAudio.meta
 
-*.meta
+# *.meta
