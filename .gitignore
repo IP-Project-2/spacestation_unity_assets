@@ -145,4 +145,10 @@ fmod_editor.log
 /ResonanceAudio
 /ResonanceAudio.meta
 
+<<<<<<< Updated upstream
 # *.meta
+=======
+*.meta
+Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist
+*.plist
+>>>>>>> Stashed changes
