@@ -144,3 +144,5 @@ fmod_editor.log
 # Google Resonance
 /ResonanceAudio
 /ResonanceAudio.meta
+
+*.meta
