@@ -114,8 +114,8 @@ fmod_editor.log
 /PolygonSciFiSpace/Materials.meta
 /PolygonSciFiSpace/Models
 /PolygonSciFiSpace/Models.meta
-/PolygonSciFiSpace/Prefabs
-/PolygonSciFiSpace/Prefabs.meta
+# /PolygonSciFiSpace/Prefabs
+# /PolygonSciFiSpace/Prefabs.meta
 /PolygonSciFiSpace/Scenes/Demo_Exterior.unity
 /PolygonSciFiSpace/Scenes/Demo_Exterior.unity.meta
 /PolygonSciFiSpace/Scenes/VR_Version
