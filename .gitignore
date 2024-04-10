@@ -141,14 +141,9 @@ fmod_editor.log
 /PostProcessing
 /PostProcessing.meta
 
-# Google Resonance
-/ResonanceAudio
-/ResonanceAudio.meta
+/project_meetings/
+/FMOD/IP2_spaceship_fmod/Assets/
 
-<<<<<<< Updated upstream
-# *.meta
-=======
 *.meta
-Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist
 *.plist
->>>>>>> Stashed changes
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{8338166c-3572-4e68-b641-726f6040aa58}">
+		<property name="assetPath">
+			<value>SFX/Breathing/Fast/Oneshots/Exhale/IP1_audio_playerBreathFastExhale10.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.49918750000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2d6f2b66-2471-4318-a9e8-4ed9a34ab396}</destination>
+		</relationship>
+	</object>
+</objects>
