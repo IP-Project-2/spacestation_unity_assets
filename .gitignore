@@ -146,3 +146,6 @@ fmod_editor.log
 /ResonanceAudio.meta
 
 # *.meta
+/project_meetings/
+
+/FMOD/IP2_spaceship_fmod/Assets/
