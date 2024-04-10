@@ -2,57 +2,176 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour {
     public CharacterController charC;
 
-    public float speed = 5;
-    public float gravity = -9.8f;
-    public float jumpHeight = 2f;
+    [SerializeField] float speed = 5;
+    [SerializeField] float creepSpeedScale = 0.5f;
+    [SerializeField] float sprintSpeedScale = 2.0f;
 
-    Vector3 velocity;
+    [SerializeField] float gravity = -9.8f;
+    [SerializeField] float jumpHeight = 2f;
 
-    public Transform groundCheck;
-    public float groundDistance = 0.4f;
-    public LayerMask groundMask;
-    bool isGrounded;
+    public Vector3 velocity;
 
-  
+    [SerializeField] Transform groundCheck;
+    [SerializeField] float groundDistance = 0.4f;
+    [SerializeField] LayerMask groundMask;
+    [SerializeField] bool isGrounded;
+
+    [SerializeField] FMODUnity.EventReference playerFootstepEvent;
+    FMOD.Studio.EventInstance playerFootstep;
+    [SerializeField]
+    FMOD.Studio.PARAMETER_ID movementStateParamID;
+    float movementStateLast = 0.0f;
+    const string FMOD_MOVEMENT_STATE = "MovementState";
+    const string FMOD_GROUND_MATERIAL = "GroundMaterial";
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    bool isSprintKeyDown = false;
+    bool isCreepKeyDown = false;
+
+    bool isFootstepStopped = false;
+
+    [SerializeField] Camera cameraRef;
+    [SerializeField] float interactDistance = 3.0f;
+
+    public bool enabledGravity = true;
+
+    void Start() {
         charC.detectCollisions = true;
+        playerFootstep = FMODUnity.RuntimeManager.CreateInstance(playerFootstepEvent);
+
+        movementStateParamID = ParamFrom(playerFootstep, FMOD_MOVEMENT_STATE);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    public static FMOD.Studio.PARAMETER_ID ParamFrom(
+        FMOD.Studio.EventInstance eventInstance,
+        string paramName
+    ) {
+        FMOD.Studio.EventDescription eventDesc;
+        eventInstance.getDescription(out eventDesc);
+        FMOD.Studio.PARAMETER_DESCRIPTION paramDesc;
+        eventDesc.getParameterDescriptionByName(paramName, out paramDesc);
+        return paramDesc.id;
+    }
+
+    void Update() {
         float xmove = Input.GetAxis("Horizontal");
-        float ymove= Input.GetAxis("Vertical");
+        float ymove = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(xmove, ymove);
 
-        //float horizontal = Input.GetAxis("Horizontal");
-        // vertical = Input.GetAxis("Vertical");
+        bool isMoving = Mathf.Abs(movement.x) > 0.0f
+            || Mathf.Abs(movement.y) > 0.0f;
+
+        // isGrounded = Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask);
+
+        if (isMoving) {
+            UpdateSpeedKeys();
+
+            if (isFootstepStopped && isGrounded) {
+                StartFootsteps();
+                isFootstepStopped = false;
+            }
+
+            if (!isGrounded) {
+                StopFootsteps();
+                isFootstepStopped = true;
+            }
+        }
+        else if (!isFootstepStopped) {
+            StopFootsteps();
+            isFootstepStopped = true;
+        }
+
+        Vector3 moveHor = transform.right * movement.x + transform.forward * movement.y;
+
+        charC.Move(moveHor * GetSpeedScale() * Time.deltaTime);
+
+        // Create downward force to simulate gravity becasue we are not using a rigidbody
+        if (enabledGravity) {
+            if (isGrounded) {
+                if (Input.GetKey(KeyCode.Space)) 
+                    velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+                else 
+                    velocity.y = -2.0f;
+            }
+            else {
+                velocity.y += gravity * Time.deltaTime * 2.0f;
+            }
+            charC.Move(velocity * Time.deltaTime);
+        }
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        Vector3 moveHor = transform.right * movement.x + transform.forward * movement.y;
-        charC.Move(moveHor*speed*Time.deltaTime);
+        Debug.Log(groundCheck.position);
 
-        velocity.y += gravity * Time.deltaTime * 2; //Create downward force to simulate gravity becasue we are not using a rigidbody
-        charC.Move(velocity* Time.deltaTime); 
+        if (Input.GetKeyDown(KeyCode.E))
+            InteractRaycast();
+    }
 
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+    // This allows other rigidbodies to be forcefully pushed by the player.
+    void OnControllerColliderHit(ControllerColliderHit hit) {
+        var body = hit.collider.attachedRigidbody;
+        if (body == null || body.isKinematic || hit.moveDirection.y < -0.3f) return;
+
+        var pushForce = new Vector3(hit.moveDirection.x, 0.0f, hit.moveDirection.z);
+        body.AddForce(pushForce, ForceMode.Impulse);
+    }
+
+    void InteractRaycast() {
+        RaycastHit hit;
+
+        if (Physics.Raycast(cameraRef.transform.position,
+            cameraRef.transform.forward * interactDistance,
+            out hit)
+        ) {
+            InteractRaycast interaction;
+            if (hit.collider.TryGetComponent(out interaction))
+                interaction.Interact();
+        }
+    }
+
+    void UpdateSpeedKeys() {
+        isSprintKeyDown = Input.GetKey(KeyCode.LeftShift);
+        isCreepKeyDown = Input.GetKey(KeyCode.LeftControl)
+            || Input.GetKey(KeyCode.LeftCommand);
+    }
+
+    void StartFootsteps() {
+        FMODUnity.RuntimeManager
+            .AttachInstanceToGameObject(playerFootstep, this.transform);
+        playerFootstep.start();
+    }
+
+    void StopFootsteps() {
+        FMODUnity.RuntimeManager
+            .DetachInstanceFromGameObject(playerFootstep);
+        playerFootstep.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
+    float GetSpeedScale() {
+        float movementScale = 1.0f;
+        float paramValue = 1.0f;
+
+        if (isSprintKeyDown) {
+            if (!isCreepKeyDown) {
+                movementScale = sprintSpeedScale;
+                paramValue = 2.0f;
+            }
+        }
+        else if (isCreepKeyDown) {
+            movementScale = creepSpeedScale;
+            paramValue = 0.0f;
         }
 
+        if (paramValue != movementStateLast)
+            playerFootstep.setParameterByID(movementStateParamID, paramValue);
 
-        if(isGrounded && velocity.y <0) //if the player is grounded and with velocity less than 0
-        {
-            velocity.y = -2f; //reset velocity
-        }
+        // alternative:
+        // playerFootstep.setParameterByNameWithLabel(...);
+
+        movementStateLast = paramValue;
+
+        return speed * movementScale;
     }
 }
