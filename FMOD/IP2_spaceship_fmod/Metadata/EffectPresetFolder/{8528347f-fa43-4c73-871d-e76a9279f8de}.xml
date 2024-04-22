@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="Mixer" id="{e7b7f95f-a506-46d2-80f7-e07dd526a566}" />
+	<object class="MasterEffectPresetFolder" id="{8528347f-fa43-4c73-871d-e76a9279f8de}" />
 </objects>

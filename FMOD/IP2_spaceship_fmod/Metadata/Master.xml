@@ -1,28 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="MixerMaster" id="{d13eaecd-e670-4d5d-9a2e-aab3df09cc2b}">
+	<object class="MixerMaster" id="{f701a6f8-d1d8-4b59-910d-33325fffbb68}">
 		<property name="name">
 			<value>Master Bus</value>
 		</property>
 		<relationship name="effectChain">
-			<destination>{1ada457f-1b2f-42fe-900a-c70541b38c75}</destination>
+			<destination>{f0e99532-2d04-4775-b669-9811c985626e}</destination>
 		</relationship>
 		<relationship name="panner">
-			<destination>{f4909135-6436-46e4-9008-ae1131cc9a1a}</destination>
+			<destination>{b8b41fa4-0e3f-423b-b50c-a2880ed0ad8e}</destination>
 		</relationship>
 		<relationship name="mixer">
-			<destination>{33337bcf-0a67-41fe-8393-d7bfcce159d6}</destination>
+			<destination>{e7b7f95f-a506-46d2-80f7-e07dd526a566}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusEffectChain" id="{1ada457f-1b2f-42fe-900a-c70541b38c75}">
+	<object class="MixerBusEffectChain" id="{f0e99532-2d04-4775-b669-9811c985626e}">
 		<relationship name="effects">
-			<destination>{d5bc9a7e-6609-4d99-989f-68a547912535}</destination>
+			<destination>{ec6dbf3e-f5ab-4440-befc-402e9031c3fd}</destination>
+			<destination>{86954d4a-ee91-4623-999a-28246e4168e4}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{f4909135-6436-46e4-9008-ae1131cc9a1a}">
+	<object class="MixerBusPanner" id="{b8b41fa4-0e3f-423b-b50c-a2880ed0ad8e}">
 		<property name="overridingOutputFormat">
 			<value>2</value>
 		</property>
 	</object>
-	<object class="MixerBusFader" id="{d5bc9a7e-6609-4d99-989f-68a547912535}" />
+	<object class="PluginEffect" id="{ec6dbf3e-f5ab-4440-befc-402e9031c3fd}">
+		<relationship name="plugin">
+			<destination>{644c2777-1556-4d05-aa1f-57ff894cfcc7}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusFader" id="{86954d4a-ee91-4623-999a-28246e4168e4}" />
+	<object class="Plugin" id="{644c2777-1556-4d05-aa1f-57ff894cfcc7}">
+		<property name="identifier">
+			<value>Resonance Audio Listener</value>
+		</property>
+		<relationship name="pluginParameters">
+			<destination>{f1017dea-8c72-4236-a767-4a45c3c00bc6}</destination>
+			<destination>{856f1a2a-b58a-4bdf-ba2b-9dadcf6ea105}</destination>
+		</relationship>
+	</object>
+	<object class="FloatPluginParameter" id="{f1017dea-8c72-4236-a767-4a45c3c00bc6}">
+		<property name="name">
+			<value>Gain</value>
+		</property>
+		<property name="value">
+			<value>-10.5</value>
+		</property>
+		<property name="curve">
+			<value>{(0.000000,-80.000000)(1.000000,0.000000)}</value>
+		</property>
+	</object>
+	<object class="DataPluginParameter" id="{856f1a2a-b58a-4bdf-ba2b-9dadcf6ea105}">
+		<property name="name">
+			<value>Room Properties</value>
+		</property>
+		<property name="dataType">
+			<value>0</value>
+		</property>
+	</object>
 </objects>

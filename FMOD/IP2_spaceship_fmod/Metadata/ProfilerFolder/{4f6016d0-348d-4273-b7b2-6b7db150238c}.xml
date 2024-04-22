@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="Mixer" id="{e7b7f95f-a506-46d2-80f7-e07dd526a566}" />
+	<object class="ProfilerSessionFolder" id="{4f6016d0-348d-4273-b7b2-6b7db150238c}" />
 </objects>
