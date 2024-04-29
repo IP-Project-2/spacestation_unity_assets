@@ -123,6 +123,14 @@ MonoBehaviour:
   callbacks:
   - targetObject: {fileID: 0}
     functionName: ToggleDoor
+    fmodEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    spatialEvent: 1
 --- !u!114 &839498067028762132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,8 +144,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openHeight: 3
-  animationDuration: 1
+  animationDuration: 0.6
   autoCloseDelay: 3
+  forceOpen: 0
+  attachedObjects: []
   animationCurve:
     serializedVersion: 2
     m_Curve:
@@ -162,6 +172,21 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  doorOpenEvent:
+    Guid:
+      Data1: -1038969814
+      Data2: 1259804496
+      Data3: 1269299343
+      Data4: 1878727060
+    Path: event:/Interact/INT_DoorOpen
+  doorCloseEvent:
+    Guid:
+      Data1: 1162889325
+      Data2: 1323531456
+      Data3: 574019985
+      Data4: -684238981
+    Path: event:/Interact/INT_LiftDoorClose
+  doorType: 0
 --- !u!1 &1543695114780030
 GameObject:
   m_ObjectHideFlags: 0

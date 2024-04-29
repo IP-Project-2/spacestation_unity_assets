@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8941205195524554122
+--- !u!114 &-9198850420970108823
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Interact/INT_LiftDoorClose
+  m_Name: event:/FX/Sweepo/FX_SweepoFall
   m_EditorClassIdentifier: 
-  Path: event:/Interact/INT_LiftDoorClose
+  Path: event:/FX/Sweepo/FX_SweepoFall
   Guid:
-    Data1: 1162889325
-    Data2: 1323531456
-    Data3: 574019985
-    Data4: -684238981
+    Data1: -993383389
+    Data2: 1322363320
+    Data3: 1940526013
+    Data4: 1028737370
   Banks:
-  - {fileID: 7861129922153883272}
+  - {fileID: 3550665669815909220}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 4000
 --- !u!114 &-8294350360490573335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,12 +48,40 @@ MonoBehaviour:
   Banks:
   - {fileID: 7861129922153883272}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1750
+  Length: 750
+--- !u!114 &-7767982985847052196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PLY_Land/GroundMaterial
+  m_EditorClassIdentifier: 
+  Name: GroundMaterial
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 1388210885
+    data2: 461686580
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - MetalHeavy
+  - MetalLight
+  - Glass
+  - Fabric
+  Exists: 1
 --- !u!114 &-7555366473108754200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,12 +97,12 @@ MonoBehaviour:
   Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638483132833116918
+  lastModified: 638499988623685964
   FileSizes:
   - Name: Desktop
-    Value: 1046
+    Value: 949856
   Exists: 1
---- !u!114 &-7280703001504158127
+--- !u!114 &-7023967543956738500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,23 +112,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/FX_Forcefield
+  m_Name: event:/Interact/INT_DoorCloseHeavy
   m_EditorClassIdentifier: 
-  Path: event:/FX/FX_Forcefield
+  Path: event:/Interact/INT_DoorCloseHeavy
   Guid:
-    Data1: -1890531119
-    Data2: 1218307767
-    Data3: -1020191349
-    Data4: 1798907762
+    Data1: 360776256
+    Data2: 1090334255
+    Data3: 84269733
+    Data4: 1731833700
   Banks:
-  - {fileID: 3550665669815909220}
-  IsStream: 1
+  - {fileID: -6860924599853386255}
+  IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 28750
+  Length: 6000
+--- !u!114 &-6948383074205019643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interact/Lift/INT_LiftDoorClose
+  m_EditorClassIdentifier: 
+  Path: event:/Interact/Lift/INT_LiftDoorClose
+  Guid:
+    Data1: 1162889325
+    Data2: 1323531456
+    Data3: 574019985
+    Data4: -684238981
+  Banks:
+  - {fileID: 7861129922153883272}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6000
 --- !u!114 &-6882357463389055455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,11 +195,38 @@ MonoBehaviour:
   Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Interact.bank
   Name: Interact
   StudioPath: bank:/Interact
-  lastModified: 638481970125944396
+  lastModified: 638500232284834202
   FileSizes:
   - Name: Desktop
-    Value: 494
+    Value: 213152
   Exists: 1
+--- !u!114 &-6764707940735456680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interact/Lift/INT_LiftDoorsClosing
+  m_EditorClassIdentifier: 
+  Path: event:/Interact/Lift/INT_LiftDoorsClosing
+  Guid:
+    Data1: -1826969072
+    Data2: 1104265469
+    Data3: 274999177
+    Data4: -92431517
+  Banks:
+  - {fileID: -6860924599853386255}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4000
 --- !u!114 &-6328042791997621018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +247,60 @@ MonoBehaviour:
     Data4: -1458659122
   Banks:
   - {fileID: -7555366473108754200}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0.5
+  MaxDistance: 7.4
+  Length: 26972
+--- !u!114 &-5793301575051271807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Collision/COL_Metal
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Collision/COL_Metal
+  Guid:
+    Data1: 1248635487
+    Data2: 1261771265
+    Data3: -666970977
+    Data4: -472729751
+  Banks:
+  - {fileID: 3550665669815909220}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4000
+--- !u!114 &-5719679967730291996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/FX_LiftMechanical
+  m_EditorClassIdentifier: 
+  Path: event:/FX/FX_LiftMechanical
+  Guid:
+    Data1: 438953104
+    Data2: 1236632610
+    Data3: 209811588
+    Data4: -1003460944
+  Banks:
+  - {fileID: 3550665669815909220}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -172,6 +308,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4899395370339949073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/MRI/FX_MRI4
+  m_EditorClassIdentifier: 
+  Path: event:/FX/MRI/FX_MRI4
+  Guid:
+    Data1: 880289749
+    Data2: 1276703536
+    Data3: -1993866864
+    Data4: 350781882
+  Banks:
+  - {fileID: 3550665669815909220}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 9.8
+  Length: 16551
 --- !u!114 &-4895670307018210102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +363,31 @@ MonoBehaviour:
   - Glass
   - Fabric
   Exists: 1
---- !u!114 &-4876794323308364919
+--- !u!114 &-4840109484081854057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AMB_Main/AmbienceVolume
+  m_EditorClassIdentifier: 
+  Name: AmbienceVolume
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1440791691
+    data2: 616872020
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-4541416523244866832
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,9 +397,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Interact/INT_LiftDoorOpen
+  m_Name: event:/Interact/Lift/INT_LiftDoorOpen
   m_EditorClassIdentifier: 
-  Path: event:/Interact/INT_LiftDoorOpen
+  Path: event:/Interact/Lift/INT_LiftDoorOpen
   Guid:
     Data1: 1496718655
     Data2: 1077380455
@@ -221,13 +408,361 @@ MonoBehaviour:
   Banks:
   - {fileID: 7861129922153883272}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &-4472635920549992681
+  Length: 4000
+--- !u!114 &-4489722807492472715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Computer/FX_Computer2
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Computer/FX_Computer2
+  Guid:
+    Data1: -1625914579
+    Data2: 1108431428
+    Data3: 14006192
+    Data4: -73601034
+  Banks:
+  - {fileID: 3550665669815909220}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 9.400001
+  Length: 11000
+--- !u!114 &-3564723183158074164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AmbienceVolume
+  m_EditorClassIdentifier: 
+  Name: AmbienceVolume
+  StudioPath: parameter:/AmbienceVolume
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1440791691
+    data2: 616872020
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-2986604706559688147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/MRI/FX_MRI2
+  m_EditorClassIdentifier: 
+  Path: event:/FX/MRI/FX_MRI2
+  Guid:
+    Data1: 1675661910
+    Data2: 1333298790
+    Data3: -1674721139
+    Data4: -1217195926
+  Banks:
+  - {fileID: 3550665669815909220}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 10
+  Length: 5471
+--- !u!114 &-2792803920833459158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/FX_Forcefield
+  m_EditorClassIdentifier: 
+  Path: event:/FX/FX_Forcefield
+  Guid:
+    Data1: -1890531119
+    Data2: 1218307767
+    Data3: -1020191349
+    Data4: 1798907762
+  Banks:
+  - {fileID: 3550665669815909220}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 15
+  Length: 28750
+--- !u!114 &-2646087259890064795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638500230316870324
+  FileSizes:
+  - Name: Desktop
+    Value: 3076
+  Exists: 1
+--- !u!114 &-2060201559204280403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Ambience.bank
+  Name: Ambience
+  StudioPath: bank:/Ambience
+  lastModified: 638500228767184071
+  FileSizes:
+  - Name: Desktop
+    Value: 3994400
+  Exists: 1
+--- !u!114 &-2023032673670852668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/MRI/FX_MRI3
+  m_EditorClassIdentifier: 
+  Path: event:/FX/MRI/FX_MRI3
+  Guid:
+    Data1: 280111751
+    Data2: 1118752197
+    Data3: -1559902832
+    Data4: -414642295
+  Banks:
+  - {fileID: 3550665669815909220}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 9.400001
+  Length: 3990
+--- !u!114 &-1894969806264391362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/PLY_Land
+  m_EditorClassIdentifier: 
+  Path: event:/Player/PLY_Land
+  Guid:
+    Data1: -2107352200
+    Data2: 1236487037
+    Data3: -1216935010
+    Data4: 1345829773
+  Banks:
+  - {fileID: 7861129922153883272}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -7767982985847052196}
+  MinDistance: 0
+  MaxDistance: 2
+  Length: 1000
+--- !u!114 &-1370164531192060932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Sweepo/FX_SweepoHurt
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Sweepo/FX_SweepoHurt
+  Guid:
+    Data1: 290578130
+    Data2: 1093843828
+    Data3: 350768513
+    Data4: -689673023
+  Banks:
+  - {fileID: 3550665669815909220}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4000
+--- !u!114 &-450340944745844546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Computer/FX_Computer5
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Computer/FX_Computer5
+  Guid:
+    Data1: 1939565960
+    Data2: 1075772289
+    Data3: 427321473
+    Data4: 423620115
+  Banks:
+  - {fileID: 3550665669815909220}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 25
+  Length: 30000
+--- !u!114 &-199558721979706387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/FX_Mechanical
+  m_EditorClassIdentifier: 
+  Path: event:/FX/FX_Mechanical
+  Guid:
+    Data1: -2121809098
+    Data2: 1131699160
+    Data3: -787584336
+    Data4: -424553567
+  Banks:
+  - {fileID: 3550665669815909220}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 10
+  Length: 12966
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -2646087259890064795}
+  - {fileID: -2060201559204280403}
+  - {fileID: 3550665669815909220}
+  - {fileID: 2763098020940051921}
+  - {fileID: 7861129922153883272}
+  - {fileID: -6860924599853386255}
+  - {fileID: -7555366473108754200}
+  EditorEvents:
+  - {fileID: 8382012083552251382}
+  - {fileID: 3565493638661118236}
+  - {fileID: 2428518873685551299}
+  - {fileID: 786288273746786706}
+  - {fileID: 102410805112430029}
+  - {fileID: -6328042791997621018}
+  - {fileID: -8294350360490573335}
+  - {fileID: -4489722807492472715}
+  - {fileID: -199558721979706387}
+  - {fileID: 8888589425922943561}
+  - {fileID: -2986604706559688147}
+  - {fileID: 5171426598936374179}
+  - {fileID: 1842648296378430613}
+  - {fileID: -2023032673670852668}
+  - {fileID: 3706895908903321460}
+  - {fileID: -5719679967730291996}
+  - {fileID: -2792803920833459158}
+  - {fileID: 87768964298224941}
+  - {fileID: -4899395370339949073}
+  - {fileID: 5488535544896894115}
+  - {fileID: 8187396298260117261}
+  - {fileID: -450340944745844546}
+  - {fileID: -9198850420970108823}
+  - {fileID: 1852048715316714810}
+  - {fileID: -1370164531192060932}
+  - {fileID: -5793301575051271807}
+  - {fileID: 143175840144732938}
+  - {fileID: -1894969806264391362}
+  - {fileID: -6764707940735456680}
+  - {fileID: 9177586053006526501}
+  - {fileID: -4541416523244866832}
+  - {fileID: -6948383074205019643}
+  - {fileID: 8834136792347312657}
+  - {fileID: -7023967543956738500}
+  EditorParameters:
+  - {fileID: 1706064811633212761}
+  - {fileID: 4826093528387337423}
+  - {fileID: 8892173258090680167}
+  - {fileID: 7611139785760596059}
+  - {fileID: -3564723183158074164}
+  MasterBanks:
+  - {fileID: 2763098020940051921}
+  StringsBanks:
+  - {fileID: -2646087259890064795}
+  cacheTime: 638500238849715060
+  cacheVersion: 131616
+--- !u!114 &87768964298224941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,120 +789,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 41000
---- !u!114 &-2646087259890064795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638483132832205170
-  FileSizes:
-  - Name: Desktop
-    Value: 2100
-  Exists: 1
---- !u!114 &-2060201559204280403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambience.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Ambience.bank
-  Name: Ambience
-  StudioPath: bank:/Ambience
-  lastModified: 638483132831664823
-  FileSizes:
-  - Name: Desktop
-    Value: 3992992
-  Exists: 1
---- !u!114 &-1132800218615010774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/FX_PressureRelease
-  m_EditorClassIdentifier: 
-  Path: event:/FX/FX_PressureRelease
-  Guid:
-    Data1: -61214915
-    Data2: 1194556109
-    Data3: -1081045884
-    Data4: -1271440392
-  Banks:
-  - {fileID: 3550665669815909220}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2003
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: -2646087259890064795}
-  - {fileID: -2060201559204280403}
-  - {fileID: 3550665669815909220}
-  - {fileID: 2763098020940051921}
-  - {fileID: 7861129922153883272}
-  - {fileID: -6860924599853386255}
-  - {fileID: -7555366473108754200}
-  EditorEvents:
-  - {fileID: 8382012083552251382}
-  - {fileID: 1621625910374602823}
-  - {fileID: 3565493638661118236}
-  - {fileID: 2428518873685551299}
-  - {fileID: 786288273746786706}
-  - {fileID: 3860981730741241450}
-  - {fileID: -4472635920549992681}
-  - {fileID: 7485041700169267414}
-  - {fileID: -1132800218615010774}
-  - {fileID: -7280703001504158127}
-  - {fileID: 102410805112430029}
-  - {fileID: 2879489652249880882}
-  - {fileID: -6328042791997621018}
-  - {fileID: -8294350360490573335}
-  - {fileID: -4876794323308364919}
-  - {fileID: -8941205195524554122}
-  EditorParameters:
-  - {fileID: 1706064811633212761}
-  - {fileID: 4826093528387337423}
-  - {fileID: 8892173258090680167}
-  MasterBanks:
-  - {fileID: 2763098020940051921}
-  StringsBanks:
-  - {fileID: -2646087259890064795}
-  cacheTime: 638483132833116918
-  cacheVersion: 131616
 --- !u!114 &102410805112430029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,6 +817,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &143175840144732938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interact/INT_DoorOpenHeavy
+  m_EditorClassIdentifier: 
+  Path: event:/Interact/INT_DoorOpenHeavy
+  Guid:
+    Data1: -321182503
+    Data2: 1091150486
+    Data3: -276562048
+    Data4: -704279065
+  Banks:
+  - {fileID: -6860924599853386255}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 750
 --- !u!114 &786288273746786706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,33 +873,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 668
---- !u!114 &1621625910374602823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/FX_LiftArrive
-  m_EditorClassIdentifier: 
-  Path: event:/FX/FX_LiftArrive
-  Guid:
-    Data1: 896397074
-    Data2: 1267209330
-    Data3: 1806595223
-    Data4: 1770844356
-  Banks:
-  - {fileID: 3550665669815909220}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2750
 --- !u!114 &1706064811633212761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,6 +901,60 @@ MonoBehaviour:
   - Glass
   - Fabric
   Exists: 1
+--- !u!114 &1842648296378430613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/MRI/FX_MRI1
+  m_EditorClassIdentifier: 
+  Path: event:/FX/MRI/FX_MRI1
+  Guid:
+    Data1: 19732350
+    Data2: 1094283517
+    Data3: -83453044
+    Data4: 714663513
+  Banks:
+  - {fileID: 3550665669815909220}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4139
+--- !u!114 &1852048715316714810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Sweepo/FX_SweepoGeneral
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Sweepo/FX_SweepoGeneral
+  Guid:
+    Data1: -337424859
+    Data2: 1220203557
+    Data3: 790924177
+    Data4: 1217824706
+  Banks:
+  - {fileID: 3550665669815909220}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &2428518873685551299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,38 +997,11 @@ MonoBehaviour:
   Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638483132832188813
+  lastModified: 638500230316855353
   FileSizes:
   - Name: Desktop
-    Value: 4298
+    Value: 5918
   Exists: 1
---- !u!114 &2879489652249880882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/FX_LiftMechanical
-  m_EditorClassIdentifier: 
-  Path: event:/FX/FX_LiftMechanical
-  Guid:
-    Data1: 438953104
-    Data2: 1236632610
-    Data3: 209811588
-    Data4: -1003460944
-  Banks:
-  - {fileID: 3550665669815909220}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &3343305745342394015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,10 +1068,10 @@ MonoBehaviour:
   Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/FX.bank
   Name: FX
   StudioPath: bank:/FX
-  lastModified: 638483132832109914
+  lastModified: 638500238849715060
   FileSizes:
   - Name: Desktop
-    Value: 1088448
+    Value: 2945184
   Exists: 1
 --- !u!114 &3565493638661118236
 MonoBehaviour:
@@ -652,7 +1100,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &3860981730741241450
+--- !u!114 &3706895908903321460
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -677,7 +1125,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 25
   Length: 12351
 --- !u!114 &4826093528387337423
 MonoBehaviour:
@@ -703,7 +1151,7 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &7485041700169267414
+--- !u!114 &5171426598936374179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -713,23 +1161,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/FX_Mechanical
+  m_Name: event:/FX/Computer/FX_Computer4
   m_EditorClassIdentifier: 
-  Path: event:/FX/FX_Mechanical
+  Path: event:/FX/Computer/FX_Computer4
   Guid:
-    Data1: -2121809098
-    Data2: 1131699160
-    Data3: -787584336
-    Data4: -424553567
+    Data1: -82287511
+    Data2: 1131623148
+    Data3: -2108302446
+    Data4: -856893934
   Banks:
   - {fileID: 3550665669815909220}
-  IsStream: 0
-  Is3D: 0
+  IsStream: 1
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
-  Length: 12966
+  MaxDistance: 7.2000003
+  Length: 10684
+--- !u!114 &5488535544896894115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Computer/FX_Computer1
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Computer/FX_Computer1
+  Guid:
+    Data1: -2071575586
+    Data2: 1186350489
+    Data3: -1520421473
+    Data4: -1114880608
+  Banks:
+  - {fileID: 3550665669815909220}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 7.2000003
+  Length: 27544
 --- !u!114 &7603150361043010007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,6 +1229,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7611139785760596059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/FXVolume
+  m_EditorClassIdentifier: 
+  Name: FXVolume
+  StudioPath: parameter:/FXVolume
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 529959613
+    data2: 1875693560
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &7861129922153883272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,11 +1268,38 @@ MonoBehaviour:
   Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 638483132833076048
+  lastModified: 638500227742234781
   FileSizes:
   - Name: Desktop
-    Value: 156608
+    Value: 280512
   Exists: 1
+--- !u!114 &8187396298260117261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Computer/FX_Computer3
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Computer/FX_Computer3
+  Guid:
+    Data1: 2095938294
+    Data2: 1303417702
+    Data3: 280615048
+    Data4: 1230294717
+  Banks:
+  - {fileID: 3550665669815909220}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 10
+  Length: 48020
 --- !u!114 &8382012083552251382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -800,9 +1326,64 @@ MonoBehaviour:
   Parameters:
   - {fileID: 3512617322059358031}
   - {fileID: -6882357463389055455}
+  - {fileID: -4840109484081854057}
   MinDistance: 1
   MaxDistance: 20
   Length: 127999
+--- !u!114 &8834136792347312657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interact/Lift/INT_LiftArrive
+  m_EditorClassIdentifier: 
+  Path: event:/Interact/Lift/INT_LiftArrive
+  Guid:
+    Data1: 896397074
+    Data2: 1267209330
+    Data3: 1806595223
+    Data4: 1770844356
+  Banks:
+  - {fileID: -6860924599853386255}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4218
+--- !u!114 &8888589425922943561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/FX_PressureRelease
+  m_EditorClassIdentifier: 
+  Path: event:/FX/FX_PressureRelease
+  Guid:
+    Data1: -61214915
+    Data2: 1194556109
+    Data3: -1081045884
+    Data4: -1271440392
+  Banks:
+  - {fileID: 3550665669815909220}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2003
 --- !u!114 &8892173258090680167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -827,3 +1408,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &9177586053006526501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interact/Lift/INT_LiftMove
+  m_EditorClassIdentifier: 
+  Path: event:/Interact/Lift/INT_LiftMove
+  Guid:
+    Data1: -411475356
+    Data2: 1223802830
+    Data3: -298817146
+    Data4: 768196428
+  Banks:
+  - {fileID: -6860924599853386255}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

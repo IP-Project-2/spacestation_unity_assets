@@ -59,10 +59,14 @@
 			<destination>{604c59b7-5fbf-4216-8ea6-8444e96ef6a4}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{d13eaecd-e670-4d5d-9a2e-aab3df09cc2b}</destination>
+			<destination>{5b51ae72-0259-4352-be79-d55e7426c1c6}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{b1a3f440-c83a-46a6-bebd-947b3cafd981}" />
+	<object class="EventAutomatableProperties" id="{b1a3f440-c83a-46a6-bebd-947b3cafd981}">
+		<property name="maximumDistance">
+			<value>25</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{2ae90758-f307-40d8-abe8-7304aa943d0d}" />
 	<object class="MarkerTrack" id="{d1375ed7-4d16-44fe-8f21-cc9d6ae228fe}" />
 	<object class="GroupTrack" id="{d1d36aa2-f02e-41d8-9c8d-17975e0db019}">
@@ -368,22 +372,22 @@
 			<value>9</value>
 		</property>
 		<property name="frequencyA">
-			<value>3137.55566</value>
+			<value>1519.33789</value>
 		</property>
 		<property name="frequencyB">
-			<value>230.578033</value>
+			<value>240.333511</value>
 		</property>
 		<property name="frequencyC">
-			<value>387.055267</value>
+			<value>486.13089</value>
 		</property>
 		<property name="gainA">
-			<value>3.99783254</value>
+			<value>-10.5633793</value>
 		</property>
 		<property name="gainB">
-			<value>2.95774698</value>
+			<value>-5.36294556</value>
 		</property>
 		<property name="gainC">
-			<value>-4.32286072</value>
+			<value>2.43770242</value>
 		</property>
 	</object>
 	<object class="ChorusEffect" id="{b2785f60-950d-4254-9f97-64f850f30fae}">
@@ -564,7 +568,7 @@
 			<value>Spread</value>
 		</property>
 		<property name="value">
-			<value>66</value>
+			<value>30</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,360.000000)}</value>
@@ -621,7 +625,6 @@
 		<property name="name">
 			<value>Attenuation Ran</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-6</value>
 		</property>
@@ -630,7 +633,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -656,7 +658,7 @@
 			<value>Near-Field Gain</value>
 		</property>
 		<property name="value">
-			<value>2</value>
+			<value>1.45000005</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,9.000000)}</value>
@@ -666,7 +668,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>

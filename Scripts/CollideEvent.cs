@@ -15,8 +15,7 @@ public class CollideEvent : MonoBehaviour {
     void Start() {
         if (collisionEvent.IsNull) return;
 
-        eventInstance =
-            FMODUnity.RuntimeManager.CreateInstance(collisionEvent);
+        eventInstance = FMODUnity.RuntimeManager.CreateInstance(collisionEvent);
     }
 
     void Update() {
@@ -39,5 +38,7 @@ public class CollideEvent : MonoBehaviour {
         FMODUnity.RuntimeManager
             .AttachInstanceToGameObject(eventInstance, this.transform);
         eventInstance.start();
+
+        cooldown = true;
     }
 }

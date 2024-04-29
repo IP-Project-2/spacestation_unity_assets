@@ -50,7 +50,7 @@ MonoBehaviour:
   Ceiling: 13
   BackWall: 13
   FrontWall: 13
-  Reflectivity: 1.51
+  Reflectivity: 0.962
   ReverbGainDb: -0.5
   ReverbBrightness: -0.77
   ReverbTime: 0.28

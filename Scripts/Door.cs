@@ -36,6 +36,7 @@ public class Door : MonoBehaviour {
     private bool hasInteracted = false;
 
     bool isOpen = false;
+    bool hasPlayedCloseSound = false;
 
     private void Start() {
         // Store the initial position of the door
@@ -61,6 +62,8 @@ public class Door : MonoBehaviour {
 
         // Check if the door is in the process of opening
         if (isOpening) {
+            hasPlayedCloseSound = false;
+
             // Calculate the time elapsed since the animation started
             float timeElapsed = Time.time - animationStartTime;
 
@@ -90,6 +93,11 @@ public class Door : MonoBehaviour {
         else if (hasInteracted) {
             // Check if the door should start closing automatically
             if (Time.time - triggerTime >= autoCloseDelay) {
+                if (!hasPlayedCloseSound) {
+                    FMODUnity.RuntimeManager.AttachInstanceToGameObject(doorCloseIns, this.transform);
+                    doorCloseIns.start();
+                    hasPlayedCloseSound = true;
+                }
                 // Start the closing animation
                 StartClosingAnimation();
             }

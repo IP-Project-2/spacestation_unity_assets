@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{34d7d38f-585f-4be3-a85b-ec8ecb18550a}">
+		<property name="assetPath">
+			<value>INT_DoorsOpening2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.2474791666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2d6f2b66-2471-4318-a9e8-4ed9a34ab396}</destination>
+		</relationship>
+	</object>
+</objects>

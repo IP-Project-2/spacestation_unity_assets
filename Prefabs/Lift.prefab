@@ -174,30 +174,6 @@ MonoBehaviour:
   externalDoorsBottom:
   - {fileID: 3800391664654447944}
   - {fileID: 3799695019629930842}
-  liftAnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   intDoorAnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -264,11 +240,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  internalDoorTime: 0.9
-  externalDoorTime: 1.2
+  internalDoorTime: 0.65
+  externalDoorTime: 0.65
   liftWaitTime: 4
   upperDoorAudioEmitter: {fileID: 8151405773852958967}
   lowerDoorAudioEmitter: {fileID: 8587196993299313987}
+  upperCarriageMusicEmitter: {fileID: 8584890617020072551}
+  lowerCarriageMusicEmitter: {fileID: 7533428075964178209}
   doorOpenEvent:
     Guid:
       Data1: 0
@@ -297,6 +275,16 @@ MonoBehaviour:
       Data3: 1806595223
       Data4: 1770844356
     Path: event:/FX/FX_LiftArrive
+  liftMusicEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  liftMusicDuckingParam:
+    Name: 
+    Value: 0
 --- !u!136 &582854461056076515
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -431,6 +419,37 @@ MonoBehaviour:
   minIntensity: 0.8
   maxIntensity: 1
   flickerFrequency: 0.03
+--- !u!1 &7533428075964178209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5188415664115215157}
+  m_Layer: 0
+  m_Name: BottomEmitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5188415664115215157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7533428075964178209}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.42261827, z: 0, w: 0.9063079}
+  m_LocalPosition: {x: -3.7799997, y: -2.4, z: -0.23999977}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4177790620867286290}
+  m_LocalEulerAnglesHint: {x: 0, y: 50, z: 0}
 --- !u!1 &8151405773852958967
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +481,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2701750941101506063}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8584890617020072551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2536002120860016174}
+  m_Layer: 0
+  m_Name: TopEmitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2536002120860016174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8584890617020072551}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.42261827, z: 0, w: 0.9063079}
+  m_LocalPosition: {x: -3.78, y: 7.75, z: -0.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7999104086327003485}
+  m_LocalEulerAnglesHint: {x: 0, y: 50, z: 0}
 --- !u!1 &8587196993299313987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,6 +1082,9 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4181682914811192, guid: e22d03e3d1c9ecb4c9fee97f23b613f2, type: 3}
       insertIndex: 0
+      addedObject: {fileID: 5188415664115215157}
+    - targetCorrespondingSourceObject: {fileID: 4181682914811192, guid: e22d03e3d1c9ecb4c9fee97f23b613f2, type: 3}
+      insertIndex: 1
       addedObject: {fileID: 5113192542997189631}
     - targetCorrespondingSourceObject: {fileID: 4181682914811192, guid: e22d03e3d1c9ecb4c9fee97f23b613f2, type: 3}
       insertIndex: -1
@@ -1158,6 +1211,9 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4181682914811192, guid: e22d03e3d1c9ecb4c9fee97f23b613f2, type: 3}
       insertIndex: 0
+      addedObject: {fileID: 2536002120860016174}
+    - targetCorrespondingSourceObject: {fileID: 4181682914811192, guid: e22d03e3d1c9ecb4c9fee97f23b613f2, type: 3}
+      insertIndex: 1
       addedObject: {fileID: 1335895863675339176}
     - targetCorrespondingSourceObject: {fileID: 4181682914811192, guid: e22d03e3d1c9ecb4c9fee97f23b613f2, type: 3}
       insertIndex: -1
