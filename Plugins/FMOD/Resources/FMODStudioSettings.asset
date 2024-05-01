@@ -380,8 +380,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/FMOD/IP2_spaceship_fmod/IP2_spaceship_fmod.fspro
-  sourceBankPath: Assets/FMOD/IP2_spaceship_fmod/Build
+  sourceProjectPath: ../test1/test1.fspro
+  sourceBankPath: ../test1/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 1
   ShowBankRefreshWindow: 0
@@ -404,12 +404,7 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  Banks:
-  - Ambience
-  - FX
-  - Interact
-  - Music
-  - Player
+  Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

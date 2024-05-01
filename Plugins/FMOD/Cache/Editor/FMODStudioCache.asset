@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8941205195524554122
+--- !u!114 &-4102972216164889482
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,250 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Interact/INT_LiftDoorClose
+  m_Name: event:/New Event 2
   m_EditorClassIdentifier: 
-  Path: event:/Interact/INT_LiftDoorClose
+  Path: event:/New Event 2
   Guid:
-    Data1: 1162889325
-    Data2: 1323531456
-    Data3: 574019985
-    Data4: -684238981
+    Data1: -1359345769
+    Data2: 1324354319
+    Data3: -899756903
+    Data4: 1591714708
   Banks:
-  - {fileID: 7861129922153883272}
+  - {fileID: 2763098020940051921}
   IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-8294350360490573335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Interact/INT_DoorOpen
-  m_EditorClassIdentifier: 
-  Path: event:/Interact/INT_DoorOpen
-  Guid:
-    Data1: -1038969814
-    Data2: 1259804496
-    Data3: 1269299343
-    Data4: 1878727060
-  Banks:
-  - {fileID: 7861129922153883272}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1750
---- !u!114 &-7555366473108754200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Music.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Music.bank
-  Name: Music
-  StudioPath: bank:/Music
-  lastModified: 638483132833116918
-  FileSizes:
-  - Name: Desktop
-    Value: 1046
-  Exists: 1
---- !u!114 &-7280703001504158127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/FX_Forcefield
-  m_EditorClassIdentifier: 
-  Path: event:/FX/FX_Forcefield
-  Guid:
-    Data1: -1890531119
-    Data2: 1218307767
-    Data3: -1020191349
-    Data4: 1798907762
-  Banks:
-  - {fileID: 3550665669815909220}
-  IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 8110046835770336379}
   MinDistance: 1
-  MaxDistance: 20
-  Length: 28750
---- !u!114 &-6882357463389055455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/AMB_Main/LiftMusicDucking
-  m_EditorClassIdentifier: 
-  Name: LiftMusicDucking
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 4210304514
-    data2: 1922065804
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
---- !u!114 &-6860924599853386255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Interact.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Interact.bank
-  Name: Interact
-  StudioPath: bank:/Interact
-  lastModified: 638481970125944396
-  FileSizes:
-  - Name: Desktop
-    Value: 494
-  Exists: 1
---- !u!114 &-6328042791997621018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/MUS_LiftMusic
-  m_EditorClassIdentifier: 
-  Path: event:/Music/MUS_LiftMusic
-  Guid:
-    Data1: 1136704505
-    Data2: 1228471563
-    Data3: 335731857
-    Data4: -1458659122
-  Banks:
-  - {fileID: -7555366473108754200}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-4895670307018210102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/PLY_FootstepLoop/GroundMaterial
-  m_EditorClassIdentifier: 
-  Name: GroundMaterial
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 1388210885
-    data2: 461686580
-  Type: 2
-  IsGlobal: 1
-  Labels:
-  - MetalHeavy
-  - MetalLight
-  - Glass
-  - Fabric
-  Exists: 1
---- !u!114 &-4876794323308364919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Interact/INT_LiftDoorOpen
-  m_EditorClassIdentifier: 
-  Path: event:/Interact/INT_LiftDoorOpen
-  Guid:
-    Data1: 1496718655
-    Data2: 1077380455
-    Data3: 10011566
-    Data4: -392340043
-  Banks:
-  - {fileID: 7861129922153883272}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-4472635920549992681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/FX_VentHeavy
-  m_EditorClassIdentifier: 
-  Path: event:/FX/FX_VentHeavy
-  Guid:
-    Data1: 1648546515
-    Data2: 1277566443
-    Data3: 1697590712
-    Data4: 1868589527
-  Banks:
-  - {fileID: 3550665669815909220}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 41000
+  MaxDistance: 4
+  Length: 2241
 --- !u!114 &-2646087259890064795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,58 +43,11 @@ MonoBehaviour:
   Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638483132832205170
+  lastModified: 638467176401878704
   FileSizes:
   - Name: Desktop
-    Value: 2100
+    Value: 810
   Exists: 1
---- !u!114 &-2060201559204280403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambience.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Ambience.bank
-  Name: Ambience
-  StudioPath: bank:/Ambience
-  lastModified: 638483132831664823
-  FileSizes:
-  - Name: Desktop
-    Value: 3992992
-  Exists: 1
---- !u!114 &-1132800218615010774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/FX_PressureRelease
-  m_EditorClassIdentifier: 
-  Path: event:/FX/FX_PressureRelease
-  Guid:
-    Data1: -61214915
-    Data2: 1194556109
-    Data3: -1081045884
-    Data4: -1271440392
-  Banks:
-  - {fileID: 3550665669815909220}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2003
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,178 +62,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -2646087259890064795}
-  - {fileID: -2060201559204280403}
-  - {fileID: 3550665669815909220}
   - {fileID: 2763098020940051921}
-  - {fileID: 7861129922153883272}
-  - {fileID: -6860924599853386255}
-  - {fileID: -7555366473108754200}
   EditorEvents:
-  - {fileID: 8382012083552251382}
-  - {fileID: 1621625910374602823}
-  - {fileID: 3565493638661118236}
-  - {fileID: 2428518873685551299}
-  - {fileID: 786288273746786706}
-  - {fileID: 3860981730741241450}
-  - {fileID: -4472635920549992681}
-  - {fileID: 7485041700169267414}
-  - {fileID: -1132800218615010774}
-  - {fileID: -7280703001504158127}
-  - {fileID: 102410805112430029}
-  - {fileID: 2879489652249880882}
-  - {fileID: -6328042791997621018}
-  - {fileID: -8294350360490573335}
-  - {fileID: -4876794323308364919}
-  - {fileID: -8941205195524554122}
-  EditorParameters:
-  - {fileID: 1706064811633212761}
-  - {fileID: 4826093528387337423}
-  - {fileID: 8892173258090680167}
+  - {fileID: -4102972216164889482}
+  EditorParameters: []
   MasterBanks:
   - {fileID: 2763098020940051921}
   StringsBanks:
   - {fileID: -2646087259890064795}
-  cacheTime: 638483132833116918
+  cacheTime: 638467176401878704
   cacheVersion: 131616
---- !u!114 &102410805112430029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/PLY_Heartbeat
-  m_EditorClassIdentifier: 
-  Path: event:/Player/PLY_Heartbeat
-  Guid:
-    Data1: -1503560607
-    Data2: 1132723013
-    Data3: 140153765
-    Data4: -930588870
-  Banks:
-  - {fileID: 7861129922153883272}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 7603150361043010007}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &786288273746786706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/PLY_FootstepLoop
-  m_EditorClassIdentifier: 
-  Path: event:/Player/PLY_FootstepLoop
-  Guid:
-    Data1: 644659389
-    Data2: 1189721903
-    Data3: -1651775077
-    Data4: -462043585
-  Banks:
-  - {fileID: 7861129922153883272}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 3343305745342394015}
-  - {fileID: -4895670307018210102}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 668
---- !u!114 &1621625910374602823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/FX_LiftArrive
-  m_EditorClassIdentifier: 
-  Path: event:/FX/FX_LiftArrive
-  Guid:
-    Data1: 896397074
-    Data2: 1267209330
-    Data3: 1806595223
-    Data4: 1770844356
-  Banks:
-  - {fileID: 3550665669815909220}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2750
---- !u!114 &1706064811633212761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/GroundMaterial
-  m_EditorClassIdentifier: 
-  Name: GroundMaterial
-  StudioPath: parameter:/GroundMaterial
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 1388210885
-    data2: 461686580
-  Type: 2
-  IsGlobal: 1
-  Labels:
-  - MetalHeavy
-  - MetalLight
-  - Glass
-  - Fabric
-  Exists: 1
---- !u!114 &2428518873685551299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/ReverbZoneA
-  m_EditorClassIdentifier: 
-  Path: snapshot:/ReverbZoneA
-  Guid:
-    Data1: -2042017082
-    Data2: 1258306561
-    Data3: -408102468
-    Data4: -1528643808
-  Banks:
-  - {fileID: 2763098020940051921}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
 --- !u!114 &2763098020940051921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,39 +87,12 @@ MonoBehaviour:
   Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638483132832188813
+  lastModified: 638467176401838806
   FileSizes:
   - Name: Desktop
-    Value: 4298
+    Value: 29568
   Exists: 1
---- !u!114 &2879489652249880882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/FX_LiftMechanical
-  m_EditorClassIdentifier: 
-  Path: event:/FX/FX_LiftMechanical
-  Guid:
-    Data1: 438953104
-    Data2: 1236632610
-    Data3: 209811588
-    Data4: -1003460944
-  Banks:
-  - {fileID: 3550665669815909220}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &3343305745342394015
+--- !u!114 &8110046835770336379
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -564,266 +102,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/PLY_FootstepLoop/MovementState
+  m_Name: parameter:/New Event 2/chracter
   m_EditorClassIdentifier: 
-  Name: MovementState
+  Name: chracter
   StudioPath: 
-  Min: 0
-  Max: 2
-  Default: 1
-  ID:
-    data1: 2507110007
-    data2: 1639301689
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Creeping
-  - Walking
-  - Running
-  Exists: 1
---- !u!114 &3512617322059358031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/AMB_Main/AmbienceIntensity
-  m_EditorClassIdentifier: 
-  Name: AmbienceIntensity
-  StudioPath: 
-  Min: 0
-  Max: 2
-  Default: 0
-  ID:
-    data1: 2436229649
-    data2: 2950550613
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
---- !u!114 &3550665669815909220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/FX.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/FX.bank
-  Name: FX
-  StudioPath: bank:/FX
-  lastModified: 638483132832109914
-  FileSizes:
-  - Name: Desktop
-    Value: 1088448
-  Exists: 1
---- !u!114 &3565493638661118236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/ReverbZoneB
-  m_EditorClassIdentifier: 
-  Path: snapshot:/ReverbZoneB
-  Guid:
-    Data1: 512759594
-    Data2: 1298281577
-    Data3: 520609179
-    Data4: 1694587996
-  Banks:
-  - {fileID: 2763098020940051921}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &3860981730741241450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/FX_AirCon
-  m_EditorClassIdentifier: 
-  Path: event:/FX/FX_AirCon
-  Guid:
-    Data1: 476959372
-    Data2: 1279075110
-    Data3: 2085503137
-    Data4: -1519035654
-  Banks:
-  - {fileID: 3550665669815909220}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 12351
---- !u!114 &4826093528387337423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/AmbienceIntensity
-  m_EditorClassIdentifier: 
-  Name: AmbienceIntensity
-  StudioPath: parameter:/AmbienceIntensity
-  Min: 0
-  Max: 2
-  Default: 0
-  ID:
-    data1: 2436229649
-    data2: 2950550613
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
---- !u!114 &7485041700169267414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/FX_Mechanical
-  m_EditorClassIdentifier: 
-  Path: event:/FX/FX_Mechanical
-  Guid:
-    Data1: -2121809098
-    Data2: 1131699160
-    Data3: -787584336
-    Data4: -424553567
-  Banks:
-  - {fileID: 3550665669815909220}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 12966
---- !u!114 &7603150361043010007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/PLY_Heartbeat/PlayerHealth
-  m_EditorClassIdentifier: 
-  Name: PlayerHealth
-  StudioPath: 
-  Min: 0
-  Max: 100
-  Default: 0
-  ID:
-    data1: 1801139194
-    data2: 2671200648
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &7861129922153883272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Player.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Player.bank
-  Name: Player
-  StudioPath: bank:/Player
-  lastModified: 638483132833076048
-  FileSizes:
-  - Name: Desktop
-    Value: 156608
-  Exists: 1
---- !u!114 &8382012083552251382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/AMB_Main
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/AMB_Main
-  Guid:
-    Data1: -1266672182
-    Data2: 1202230753
-    Data3: -313254006
-    Data4: -1481787472
-  Banks:
-  - {fileID: -2060201559204280403}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 3512617322059358031}
-  - {fileID: -6882357463389055455}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 127999
---- !u!114 &8892173258090680167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/LiftMusicDucking
-  m_EditorClassIdentifier: 
-  Name: LiftMusicDucking
-  StudioPath: parameter:/LiftMusicDucking
   Min: 0
   Max: 1
   Default: 0
   ID:
-    data1: 4210304514
-    data2: 1922065804
+    data1: 1345512136
+    data2: 305811238
   Type: 0
-  IsGlobal: 1
+  IsGlobal: 0
   Labels: []
   Exists: 1
