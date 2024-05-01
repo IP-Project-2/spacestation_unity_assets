@@ -404,6 +404,7 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Evies_Master
+  - Jamie_Master
   Banks:
   - Evies_Dialogue_CN
   - Evies_Dialogue_EN
@@ -412,6 +413,11 @@ MonoBehaviour:
   - Evies_SFX
   - Evies_Vehicles
   - Evies_VO
+  - Jamie_Ambience
+  - Jamie_FX
+  - Jamie_Interact
+  - Jamie_Music
+  - Jamie_Player
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

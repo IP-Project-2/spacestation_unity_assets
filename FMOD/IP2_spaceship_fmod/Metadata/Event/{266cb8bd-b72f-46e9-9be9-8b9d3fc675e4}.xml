@@ -836,19 +836,19 @@
 			<value>5841.67676</value>
 		</property>
 		<property name="frequencyB">
-			<value>104.926758</value>
+			<value>100.667625</value>
 		</property>
 		<property name="frequencyC">
 			<value>107.123421</value>
 		</property>
 		<property name="qualityA">
-			<value>0.340000004</value>
+			<value>0.234158188</value>
 		</property>
 		<property name="qualityC">
 			<value>1.39999998</value>
 		</property>
 		<property name="gainB">
-			<value>12.3185272</value>
+			<value>6.07800722</value>
 		</property>
 		<property name="gainC">
 			<value>-10.5633793</value>
@@ -1056,7 +1056,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>-4</value>
+			<value>-6.5</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{d6a9c1b1-8db7-44a2-ab71-bcb0074f390f}">
@@ -1064,7 +1064,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-3</value>
+			<value>-5.5</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{53d7912b-23e6-4b40-8e2c-f14404b19044}">
@@ -1072,7 +1072,7 @@
 			<value>2</value>
 		</property>
 		<property name="value">
-			<value>-9</value>
+			<value>-11.5</value>
 		</property>
 	</object>
 	<object class="Automator" id="{2d6f0db7-5439-4832-ba74-b29a7863ff28}">
@@ -1231,7 +1231,7 @@
 			<value>Gain</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-2</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,-80.000000)(1.000000,24.000000)}</value>
@@ -1299,7 +1299,6 @@
 		<property name="name">
 			<value>Attenuation Ran</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-6</value>
 		</property>
@@ -1308,7 +1307,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -1344,7 +1342,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>
@@ -1378,7 +1375,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>4000</value>
+			<value>2702.16797</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{7408efcc-0c48-49b2-8e0a-383b292dcfd3}">
@@ -1386,7 +1383,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>11000</value>
+			<value>8308.2002</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{c3ef6fb1-d036-49f4-9aef-3fc1f9d0a935}">
@@ -1394,7 +1391,7 @@
 			<value>2</value>
 		</property>
 		<property name="value">
-			<value>22000</value>
+			<value>16712.5352</value>
 		</property>
 	</object>
 </objects>

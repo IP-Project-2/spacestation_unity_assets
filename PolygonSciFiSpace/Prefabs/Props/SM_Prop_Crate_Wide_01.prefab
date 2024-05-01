@@ -233,9 +233,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1248635487
+      Data2: 1261771265
+      Data3: -666970977
+      Data4: -472729751
+    Path: event:/FX/Collision/COL_Metal
   cooldownTimeSecs: 0.4

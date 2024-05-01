@@ -19,7 +19,7 @@
 			<value>0</value>
 		</property>
 		<property name="seekSpeed">
-			<value>1.5</value>
+			<value>0.89999997615814209</value>
 		</property>
 		<property name="isExposedRecursively">
 			<value>false</value>
