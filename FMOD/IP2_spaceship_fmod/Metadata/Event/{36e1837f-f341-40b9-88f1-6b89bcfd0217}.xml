@@ -50,7 +50,7 @@
 			<destination>{21b15b8b-bdf9-4c29-8c2e-09b7a1948055}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{d13eaecd-e670-4d5d-9a2e-aab3df09cc2b}</destination>
+			<destination>{5b51ae72-0259-4352-be79-d55e7426c1c6}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{30fdb34c-482a-4042-a3f5-e680a7fa036d}" />
@@ -260,7 +260,6 @@
 		<property name="name">
 			<value>Attenuation Ran</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-6</value>
 		</property>
@@ -269,7 +268,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -305,7 +303,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>

@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Jamie_FX.bank
   Name: Jamie_FX
   StudioPath: bank:/Jamie_FX
-  lastModified: 638501646847856212
+  lastModified: 638501664664031811
   FileSizes:
   - Name: Desktop
-    Value: 2945184
+    Value: 2945408
   Exists: 1
 --- !u!114 &-8294350360490573335
 MonoBehaviour:
@@ -222,7 +222,7 @@ MonoBehaviour:
   Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Jamie_Music.bank
   Name: Jamie_Music
   StudioPath: bank:/Jamie_Music
-  lastModified: 638501646849563926
+  lastModified: 638501664664917115
   FileSizes:
   - Name: Desktop
     Value: 949856
@@ -456,10 +456,10 @@ MonoBehaviour:
   Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Jamie_Master.strings.bank
   Name: Jamie_Master.strings
   StudioPath: bank:/Jamie_Master.strings
-  lastModified: 638501646848844215
+  lastModified: 638501664664577737
   FileSizes:
   - Name: Desktop
-    Value: 3082
+    Value: 2986
   Exists: 1
 --- !u!114 &-3564723183158074164
 MonoBehaviour:
@@ -720,7 +720,6 @@ MonoBehaviour:
   - {fileID: 3565493638661118236}
   - {fileID: 2428518873685551299}
   - {fileID: 786288273746786706}
-  - {fileID: 102410805112430029}
   - {fileID: -6328042791997621018}
   - {fileID: -8294350360490573335}
   - {fileID: -4489722807492472715}
@@ -745,7 +744,6 @@ MonoBehaviour:
   - {fileID: 143175840144732938}
   - {fileID: -1894969806264391362}
   - {fileID: -6764707940735456680}
-  - {fileID: 9177586053006526501}
   - {fileID: -4541416523244866832}
   - {fileID: -6948383074205019643}
   - {fileID: 8834136792347312657}
@@ -760,7 +758,7 @@ MonoBehaviour:
   - {fileID: 2085591702829483053}
   StringsBanks:
   - {fileID: -4352892566882458749}
-  cacheTime: 638501646850544144
+  cacheTime: 638501664665363623
   cacheVersion: 131616
 --- !u!114 &87768964298224941
 MonoBehaviour:
@@ -789,34 +787,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 41000
---- !u!114 &102410805112430029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/PLY_Heartbeat
-  m_EditorClassIdentifier: 
-  Path: event:/Player/PLY_Heartbeat
-  Guid:
-    Data1: -1503560607
-    Data2: 1132723013
-    Data3: 140153765
-    Data4: -930588870
-  Banks:
-  - {fileID: 2796520628372646022}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 7603150361043010007}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &143175840144732938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -970,10 +940,10 @@ MonoBehaviour:
   Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Jamie_Master.bank
   Name: Jamie_Master
   StudioPath: bank:/Jamie_Master
-  lastModified: 638501646848827876
+  lastModified: 638501664664560385
   FileSizes:
   - Name: Desktop
-    Value: 5918
+    Value: 6362
   Exists: 1
 --- !u!114 &2428518873685551299
 MonoBehaviour:
@@ -1017,10 +987,10 @@ MonoBehaviour:
   Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Jamie_Player.bank
   Name: Jamie_Player
   StudioPath: bank:/Jamie_Player
-  lastModified: 638501646850544144
+  lastModified: 638501664665363623
   FileSizes:
   - Name: Desktop
-    Value: 280512
+    Value: 254272
   Exists: 1
 --- !u!114 &3343305745342394015
 MonoBehaviour:
@@ -1193,10 +1163,10 @@ MonoBehaviour:
   Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Jamie_Interact.bank
   Name: Jamie_Interact
   StudioPath: bank:/Jamie_Interact
-  lastModified: 638501646848731566
+  lastModified: 638501664664458924
   FileSizes:
   - Name: Desktop
-    Value: 213152
+    Value: 212480
   Exists: 1
 --- !u!114 &5488535544896894115
 MonoBehaviour:
@@ -1225,30 +1195,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 7.2000003
   Length: 27544
---- !u!114 &7603150361043010007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/PLY_Heartbeat/PlayerHealth
-  m_EditorClassIdentifier: 
-  Name: PlayerHealth
-  StudioPath: 
-  Min: 0
-  Max: 100
-  Default: 0
-  ID:
-    data1: 1801139194
-    data2: 2671200648
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &7611139785760596059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1408,30 +1354,3 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &9177586053006526501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Interact/Lift/INT_LiftMove
-  m_EditorClassIdentifier: 
-  Path: event:/Interact/Lift/INT_LiftMove
-  Guid:
-    Data1: -411475356
-    Data2: 1223802830
-    Data3: -298817146
-    Data4: 768196428
-  Banks:
-  - {fileID: 5311224961581446759}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0

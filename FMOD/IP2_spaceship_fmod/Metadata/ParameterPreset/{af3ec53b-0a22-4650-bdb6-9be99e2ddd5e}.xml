@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="ParameterPreset" id="{af3ec53b-0a22-4650-bdb6-9be99e2ddd5e}">
 		<property name="name">
-			<value>FXVolume</value>
+			<value>Jamie_FXVolume</value>
 		</property>
 		<relationship name="folder">
 			<destination>{2924c35d-c43b-4e95-b153-f2a984cd213e}</destination>
