@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7389f538-e47d-4df3-9c26-2335cd9d2456}">
+		<property name="assetPath">
+			<value>FX_LandDeep4.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.43179166666666668</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2d6f2b66-2471-4318-a9e8-4ed9a34ab396}</destination>
+		</relationship>
+	</object>
+</objects>
