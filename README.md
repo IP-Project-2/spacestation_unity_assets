@@ -36,8 +36,3 @@ This way, we only have to worry about our own branch, and then we can merge them
 Also, if two people are working on the same thing, they may work on the same branch to keep changes compact, for example.
 
 Moving from one branch to another is called a *checkout*.
-
-## TODO
-- [ ] Sort out version control
-- [ ] Get everyone on the repository and able to push changes
-- [ ] Figure out which tasks to delegate
