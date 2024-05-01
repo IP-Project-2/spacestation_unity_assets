@@ -19,7 +19,7 @@ MonoBehaviour:
     Data3: 1940526013
     Data4: 1028737370
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -27,6 +27,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4000
+--- !u!114 &-8932745394589793426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Jamie_FX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Jamie_FX.bank
+  Name: Jamie_FX
+  StudioPath: bank:/Jamie_FX
+  lastModified: 638501646847856212
+  FileSizes:
+  - Name: Desktop
+    Value: 2945184
+  Exists: 1
 --- !u!114 &-8294350360490573335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,7 +66,7 @@ MonoBehaviour:
     Data3: 1269299343
     Data4: 1878727060
   Banks:
-  - {fileID: 7861129922153883272}
+  - {fileID: 2796520628372646022}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -82,26 +102,6 @@ MonoBehaviour:
   - Glass
   - Fabric
   Exists: 1
---- !u!114 &-7555366473108754200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Music.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Music.bank
-  Name: Music
-  StudioPath: bank:/Music
-  lastModified: 638499988623685964
-  FileSizes:
-  - Name: Desktop
-    Value: 949856
-  Exists: 1
 --- !u!114 &-7023967543956738500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
     Data3: 84269733
     Data4: 1731833700
   Banks:
-  - {fileID: -6860924599853386255}
+  - {fileID: 5311224961581446759}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -148,7 +148,7 @@ MonoBehaviour:
     Data3: 574019985
     Data4: -684238981
   Banks:
-  - {fileID: 7861129922153883272}
+  - {fileID: 2796520628372646022}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -180,26 +180,6 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &-6860924599853386255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Interact.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Interact.bank
-  Name: Interact
-  StudioPath: bank:/Interact
-  lastModified: 638500232284834202
-  FileSizes:
-  - Name: Desktop
-    Value: 213152
-  Exists: 1
 --- !u!114 &-6764707940735456680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,7 +199,7 @@ MonoBehaviour:
     Data3: 274999177
     Data4: -92431517
   Banks:
-  - {fileID: -6860924599853386255}
+  - {fileID: 5311224961581446759}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -227,6 +207,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4000
+--- !u!114 &-6330288652659186577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Jamie_Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Jamie_Music.bank
+  Name: Jamie_Music
+  StudioPath: bank:/Jamie_Music
+  lastModified: 638501646849563926
+  FileSizes:
+  - Name: Desktop
+    Value: 949856
+  Exists: 1
 --- !u!114 &-6328042791997621018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,7 +246,7 @@ MonoBehaviour:
     Data3: 335731857
     Data4: -1458659122
   Banks:
-  - {fileID: -7555366473108754200}
+  - {fileID: -6330288652659186577}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
     Data3: -666970977
     Data4: -472729751
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -300,7 +300,7 @@ MonoBehaviour:
     Data3: 209811588
     Data4: -1003460944
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -327,7 +327,7 @@ MonoBehaviour:
     Data3: -1993866864
     Data4: 350781882
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -406,7 +406,7 @@ MonoBehaviour:
     Data3: 10011566
     Data4: -392340043
   Banks:
-  - {fileID: 7861129922153883272}
+  - {fileID: 2796520628372646022}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -433,7 +433,7 @@ MonoBehaviour:
     Data3: 14006192
     Data4: -73601034
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -441,6 +441,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 9.400001
   Length: 11000
+--- !u!114 &-4352892566882458749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Jamie_Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Jamie_Master.strings.bank
+  Name: Jamie_Master.strings
+  StudioPath: bank:/Jamie_Master.strings
+  lastModified: 638501646848844215
+  FileSizes:
+  - Name: Desktop
+    Value: 3082
+  Exists: 1
 --- !u!114 &-3564723183158074164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,7 +504,7 @@ MonoBehaviour:
     Data3: -1674721139
     Data4: -1217195926
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -511,7 +531,7 @@ MonoBehaviour:
     Data3: -1020191349
     Data4: 1798907762
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -519,46 +539,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 15
   Length: 28750
---- !u!114 &-2646087259890064795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638500230316870324
-  FileSizes:
-  - Name: Desktop
-    Value: 3076
-  Exists: 1
---- !u!114 &-2060201559204280403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambience.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Ambience.bank
-  Name: Ambience
-  StudioPath: bank:/Ambience
-  lastModified: 638500228767184071
-  FileSizes:
-  - Name: Desktop
-    Value: 3994400
-  Exists: 1
 --- !u!114 &-2023032673670852668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,7 +558,7 @@ MonoBehaviour:
     Data3: -1559902832
     Data4: -414642295
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -605,7 +585,7 @@ MonoBehaviour:
     Data3: -1216935010
     Data4: 1345829773
   Banks:
-  - {fileID: 7861129922153883272}
+  - {fileID: 2796520628372646022}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -633,7 +613,7 @@ MonoBehaviour:
     Data3: 350768513
     Data4: -689673023
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -660,7 +640,7 @@ MonoBehaviour:
     Data3: 427321473
     Data4: 423620115
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -687,7 +667,7 @@ MonoBehaviour:
     Data3: -787584336
     Data4: -424553567
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -695,6 +675,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 10
   Length: 12966
+--- !u!114 &-129435299478756336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Jamie_Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Jamie_Ambience.bank
+  Name: Jamie_Ambience
+  StudioPath: bank:/Jamie_Ambience
+  lastModified: 638501646845549562
+  FileSizes:
+  - Name: Desktop
+    Value: 3994400
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,13 +708,13 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -2646087259890064795}
-  - {fileID: -2060201559204280403}
-  - {fileID: 3550665669815909220}
-  - {fileID: 2763098020940051921}
-  - {fileID: 7861129922153883272}
-  - {fileID: -6860924599853386255}
-  - {fileID: -7555366473108754200}
+  - {fileID: -4352892566882458749}
+  - {fileID: -129435299478756336}
+  - {fileID: -8932745394589793426}
+  - {fileID: 5311224961581446759}
+  - {fileID: 2085591702829483053}
+  - {fileID: -6330288652659186577}
+  - {fileID: 2796520628372646022}
   EditorEvents:
   - {fileID: 8382012083552251382}
   - {fileID: 3565493638661118236}
@@ -757,10 +757,10 @@ MonoBehaviour:
   - {fileID: 7611139785760596059}
   - {fileID: -3564723183158074164}
   MasterBanks:
-  - {fileID: 2763098020940051921}
+  - {fileID: 2085591702829483053}
   StringsBanks:
-  - {fileID: -2646087259890064795}
-  cacheTime: 638500238849715060
+  - {fileID: -4352892566882458749}
+  cacheTime: 638501646850544144
   cacheVersion: 131616
 --- !u!114 &87768964298224941
 MonoBehaviour:
@@ -781,7 +781,7 @@ MonoBehaviour:
     Data3: 1697590712
     Data4: 1868589527
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -808,7 +808,7 @@ MonoBehaviour:
     Data3: 140153765
     Data4: -930588870
   Banks:
-  - {fileID: 7861129922153883272}
+  - {fileID: 2796520628372646022}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -836,7 +836,7 @@ MonoBehaviour:
     Data3: -276562048
     Data4: -704279065
   Banks:
-  - {fileID: -6860924599853386255}
+  - {fileID: 5311224961581446759}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -863,7 +863,7 @@ MonoBehaviour:
     Data3: -1651775077
     Data4: -462043585
   Banks:
-  - {fileID: 7861129922153883272}
+  - {fileID: 2796520628372646022}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -920,7 +920,7 @@ MonoBehaviour:
     Data3: -83453044
     Data4: 714663513
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -947,7 +947,7 @@ MonoBehaviour:
     Data3: 790924177
     Data4: 1217824706
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -955,6 +955,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3000
+--- !u!114 &2085591702829483053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Jamie_Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Jamie_Master.bank
+  Name: Jamie_Master
+  StudioPath: bank:/Jamie_Master
+  lastModified: 638501646848827876
+  FileSizes:
+  - Name: Desktop
+    Value: 5918
+  Exists: 1
 --- !u!114 &2428518873685551299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -974,7 +994,7 @@ MonoBehaviour:
     Data3: -408102468
     Data4: -1528643808
   Banks:
-  - {fileID: 2763098020940051921}
+  - {fileID: 2085591702829483053}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -982,7 +1002,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &2763098020940051921
+--- !u!114 &2796520628372646022
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -992,15 +1012,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Jamie_Player.bank
   m_EditorClassIdentifier: 
-  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638500230316855353
+  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Jamie_Player.bank
+  Name: Jamie_Player
+  StudioPath: bank:/Jamie_Player
+  lastModified: 638501646850544144
   FileSizes:
   - Name: Desktop
-    Value: 5918
+    Value: 280512
   Exists: 1
 --- !u!114 &3343305745342394015
 MonoBehaviour:
@@ -1053,26 +1073,6 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &3550665669815909220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/FX.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/FX.bank
-  Name: FX
-  StudioPath: bank:/FX
-  lastModified: 638500238849715060
-  FileSizes:
-  - Name: Desktop
-    Value: 2945184
-  Exists: 1
 --- !u!114 &3565493638661118236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1092,7 +1092,7 @@ MonoBehaviour:
     Data3: 520609179
     Data4: 1694587996
   Banks:
-  - {fileID: 2763098020940051921}
+  - {fileID: 2085591702829483053}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -1119,7 +1119,7 @@ MonoBehaviour:
     Data3: 2085503137
     Data4: -1519035654
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1170,7 +1170,7 @@ MonoBehaviour:
     Data3: -2108302446
     Data4: -856893934
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1178,6 +1178,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 7.2000003
   Length: 10684
+--- !u!114 &5311224961581446759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Jamie_Interact.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Jamie_Interact.bank
+  Name: Jamie_Interact
+  StudioPath: bank:/Jamie_Interact
+  lastModified: 638501646848731566
+  FileSizes:
+  - Name: Desktop
+    Value: 213152
+  Exists: 1
 --- !u!114 &5488535544896894115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1197,7 +1217,7 @@ MonoBehaviour:
     Data3: -1520421473
     Data4: -1114880608
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1253,26 +1273,6 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &7861129922153883272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Player.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/IP2_spaceship_fmod/Build/Desktop/Player.bank
-  Name: Player
-  StudioPath: bank:/Player
-  lastModified: 638500227742234781
-  FileSizes:
-  - Name: Desktop
-    Value: 280512
-  Exists: 1
 --- !u!114 &8187396298260117261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1292,7 +1292,7 @@ MonoBehaviour:
     Data3: 280615048
     Data4: 1230294717
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1319,7 +1319,7 @@ MonoBehaviour:
     Data3: -313254006
     Data4: -1481787472
   Banks:
-  - {fileID: -2060201559204280403}
+  - {fileID: -129435299478756336}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1349,7 +1349,7 @@ MonoBehaviour:
     Data3: 1806595223
     Data4: 1770844356
   Banks:
-  - {fileID: -6860924599853386255}
+  - {fileID: 5311224961581446759}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1376,7 +1376,7 @@ MonoBehaviour:
     Data3: -1081045884
     Data4: -1271440392
   Banks:
-  - {fileID: 3550665669815909220}
+  - {fileID: -8932745394589793426}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1427,7 +1427,7 @@ MonoBehaviour:
     Data3: -298817146
     Data4: 768196428
   Banks:
-  - {fileID: -6860924599853386255}
+  - {fileID: 5311224961581446759}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
