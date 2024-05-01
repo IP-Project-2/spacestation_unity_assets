@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 64523950877266972}
   - component: {fileID: 6530924180531669528}
   - component: {fileID: 8850030391557873903}
+  - component: {fileID: 1787702482390447629}
   m_Layer: 0
   m_Name: SM_Veh_Sweepo_01
   m_TagString: Untagged
@@ -235,12 +236,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 290578130
+      Data2: 1093843828
+      Data3: 350768513
+      Data4: -689673023
+    Path: event:/FX/Sweepo/FX_SweepoHurt
   cooldownTimeSecs: 0.4
+--- !u!114 &1787702482390447629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351672424428750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d8484217c374f7ea7f92c732a2b525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sweepoGeneral:
+    Guid:
+      Data1: -337424859
+      Data2: 1220203557
+      Data3: 790924177
+      Data4: 1217824706
+    Path: event:/FX/Sweepo/FX_SweepoGeneral
+  sweepoGeneralTimeSecs: 10
+  sweepoFall:
+    Guid:
+      Data1: -993383389
+      Data2: 1322363320
+      Data3: 1940526013
+      Data4: 1028737370
+    Path: event:/FX/Sweepo/FX_SweepoFall
+  fallVelocity: 5
 --- !u!1 &1514904565739146
 GameObject:
   m_ObjectHideFlags: 0

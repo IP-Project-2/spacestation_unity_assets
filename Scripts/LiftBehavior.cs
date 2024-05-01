@@ -34,7 +34,7 @@ public class LiftBehavior : MonoBehaviour {
     AnimationCurve extDoorAnimationCurve
         = AnimationCurve.EaseInOut(0.0f, 0.0f, 1.0f, 1.0f);
 
-    const float CARRIAGE_TOP_HEIGHT_OFFSET = 4.9f;
+    const float CARRIAGE_TOP_HEIGHT_OFFSET = 4.7f;
     const float EXTERNAL_DOOR_OFFSET = 0.7f;
     const float INTERNAL_DOOR_OFFSET = 0.72f;
 
@@ -44,16 +44,25 @@ public class LiftBehavior : MonoBehaviour {
 
     [SerializeField] GameObject upperDoorAudioEmitter;
     [SerializeField] GameObject lowerDoorAudioEmitter;
+    [SerializeField] GameObject upperCarriageMusicEmitter;
+    [SerializeField] GameObject lowerCarriageMusicEmitter;
 
     [SerializeField] FMODUnity.EventReference doorOpenEvent;
     FMOD.Studio.EventInstance doorOpenIns;
     [SerializeField] FMODUnity.EventReference doorCloseEvent;
     FMOD.Studio.EventInstance doorCloseIns;
+    [SerializeField] FMODUnity.EventReference doorsClosingAnnounceEvent;
+    FMOD.Studio.EventInstance doorsClosingAnnounce;
+
+    bool hasPlayedClosingAnnounce = false;
+
     [SerializeField] FMODUnity.EventReference liftEvent;
     FMOD.Studio.EventInstance liftIns;
     [SerializeField] FMODUnity.EventReference liftArriveEvent;
     FMOD.Studio.EventInstance liftArriveIns;
 
+    [SerializeField] FMODUnity.EventReference liftMusicEvent;
+    FMOD.Studio.EventInstance liftMusicIns;
     [SerializeField] FMODUnity.ParamRef liftMusicDuckingParam;
 
     float animStartTime = 0.0f;
@@ -169,6 +178,8 @@ public class LiftBehavior : MonoBehaviour {
                 isIdle = true;
                 onBottomFloor = !onBottomFloor;
 
+                hasPlayedClosingAnnounce = false;
+
                 t = 0.0f;
             }
             else {
@@ -223,11 +234,16 @@ public class LiftBehavior : MonoBehaviour {
                 break;
             // wait
             case 2:
-                if (!playerHasTeleported) Teleport();
+                if (!playerHasTeleported) {
+                    Teleport();
+                }
                 break;
             // int
             case 3: {
                     player.GetComponent<PlayerController>().enabledGravity = true;
+                    FMODUnity.RuntimeManager.StudioSystem.setParameterByName("LiftMusicDucking", 0.0f);
+                    liftMusicIns.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                    liftIns.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 
                     for (int i = 0; i < 2; i++) {
                         var currPosL = carriageDoorLeft[i].transform.position;
@@ -272,13 +288,10 @@ public class LiftBehavior : MonoBehaviour {
         var cc = pc.GetComponent<CharacterController>();
         cc.enabled = false;
 
-        var offset = onBottomFloor ? CARRIAGE_TOP_HEIGHT_OFFSET
-            : -CARRIAGE_TOP_HEIGHT_OFFSET;
+        var offset = onBottomFloor ? 4.7f : -5.1f;
 
-        if (CanTeleportPlayer()) {
-            var newPos = player.transform.position + new Vector3(0.0f, offset, 0.0f);
-            player.transform.position = newPos;
-        }
+        if (CanTeleportPlayer())
+            player.transform.position += new Vector3(0.0f, offset, 0.0f);
 
         cc.enabled = true;
         playerHasTeleported = true;
@@ -326,37 +339,58 @@ public class LiftBehavior : MonoBehaviour {
         switch (stage) {
             case 0:
             case 1:
-                if (!doorCloseEvent.IsNull) {
+                FMODUnity.RuntimeManager.AttachInstanceToGameObject(
+                    doorCloseIns, st01Emitter.transform
+                );
+                doorCloseIns.start();
+
+                if (!hasPlayedClosingAnnounce) {
+                    var closingEmitter = onBottomFloor
+                        ? lowerCarriageMusicEmitter : upperCarriageMusicEmitter;
+
                     FMODUnity.RuntimeManager.AttachInstanceToGameObject(
-                        doorCloseIns, st01Emitter.transform
+                        doorsClosingAnnounce, closingEmitter.transform
                     );
-                    doorCloseIns.start();
+                    doorsClosingAnnounce.start();
+
+                    hasPlayedClosingAnnounce = true;
                 }
+
                 break;
 
             case 2:
-                if (!liftEvent.IsNull && CanTeleportPlayer()) {
-                    liftIns.start();
-                    liftIns.setParameterByID(liftMusicDuckingParam.ID, 1.0f);
-                }
+                if (!CanTeleportPlayer()) break;
+
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("LiftMusicDucking", 1.0f);
+
+                liftIns.setParameterByID(liftMusicDuckingParam.ID, 1.0f);
+
+                var emitter = !onBottomFloor ? lowerCarriageMusicEmitter : upperCarriageMusicEmitter;
+
+                FMODUnity.RuntimeManager.AttachInstanceToGameObject(liftMusicIns, emitter.transform);
+                liftMusicIns.start();
+
+                FMODUnity.RuntimeManager.AttachInstanceToGameObject(liftIns, player.transform);
+                liftIns.start();
                 break;
 
             // this is when the "lift arrive" beep plays
             case 3:
                 liftIns.setParameterByID(liftMusicDuckingParam.ID, 0.0f);
 
-                if (!liftArriveEvent.IsNull) {
-                    FMODUnity.RuntimeManager.AttachInstanceToGameObject(
-                        liftArriveIns, st02Emitter.transform
-                    );
-                    liftArriveIns.start();
-                }
-                if (!doorCloseEvent.IsNull) {
-                    FMODUnity.RuntimeManager.AttachInstanceToGameObject(
-                        doorCloseIns, st02Emitter.transform
-                    );
-                    doorCloseIns.start();
-                }
+                var arriveEmitter = !onBottomFloor
+                    ? lowerCarriageMusicEmitter : upperCarriageMusicEmitter;
+
+                FMODUnity.RuntimeManager.AttachInstanceToGameObject(
+                    liftArriveIns, arriveEmitter.transform
+                );
+                liftArriveIns.start();
+
+                FMODUnity.RuntimeManager.AttachInstanceToGameObject(
+                    doorCloseIns, st02Emitter.transform
+                );
+                doorCloseIns.start();
+
                 break;
 
             case 4:
@@ -389,10 +423,15 @@ public class LiftBehavior : MonoBehaviour {
         if (!doorOpenEvent.IsNull)
             doorOpenIns = FMODUnity.RuntimeManager.CreateInstance(doorOpenEvent);
         if (!doorCloseEvent.IsNull)
-            doorCloseIns = FMODUnity.RuntimeManager.CreateInstance(doorOpenEvent);
+            doorCloseIns = FMODUnity.RuntimeManager.CreateInstance(doorCloseEvent);
+        if (!doorsClosingAnnounceEvent.IsNull)
+            doorsClosingAnnounce = FMODUnity.RuntimeManager.CreateInstance(doorsClosingAnnounceEvent);
+
         if (!liftEvent.IsNull)
-            liftIns = FMODUnity.RuntimeManager.CreateInstance(doorOpenEvent);
+            liftIns = FMODUnity.RuntimeManager.CreateInstance(liftEvent);
         if (!liftArriveEvent.IsNull)
             liftArriveIns = FMODUnity.RuntimeManager.CreateInstance(liftArriveEvent);
+        if (!liftMusicEvent.IsNull)
+            liftMusicIns = FMODUnity.RuntimeManager.CreateInstance(liftMusicEvent);
     }
 }

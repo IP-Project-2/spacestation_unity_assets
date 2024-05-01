@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{313c4ee3-f301-47a5-bfd4-7633357b15be}">
+		<property name="name">
+			<value>LiftMusicDucking</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2924c35d-c43b-4e95-b153-f2a984cd213e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{75e71328-33fe-47e9-8cbf-3e0ec2043e21}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{75e71328-33fe-47e9-8cbf-3e0ec2043e21}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.89999997615814209</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

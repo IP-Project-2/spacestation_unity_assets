@@ -380,8 +380,13 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
+<<<<<<< HEAD
   sourceProjectPath: ../test1/test1.fspro
   sourceBankPath: ../test1/Build
+=======
+  sourceProjectPath: ../SpacestationFMODMusic/SpacestationFMODMusic.fspro
+  sourceBankPath: ../SpacestationFMODMusic/Build
+>>>>>>> test_merge
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 1
   ShowBankRefreshWindow: 0
@@ -403,8 +408,26 @@ MonoBehaviour:
   RealChannelSettings: []
   Plugins: []
   MasterBanks:
+<<<<<<< HEAD
   - Master
   Banks: []
+=======
+  - Evies_Master
+  - Jamie_Master
+  Banks:
+  - Evies_Dialogue_CN
+  - Evies_Dialogue_EN
+  - Evies_Dialogue_JP
+  - Evies_Music
+  - Evies_SFX
+  - Evies_Vehicles
+  - Evies_VO
+  - Jamie_Ambience
+  - Jamie_FX
+  - Jamie_Interact
+  - Jamie_Music
+  - Jamie_Player
+>>>>>>> test_merge
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
