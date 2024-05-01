@@ -227,7 +227,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 949856
   Exists: 1
---- !u!114 &-6328042791997621018
+--- !u!114 &-5562722548757283026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -237,14 +237,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/MUS_LiftMusic
+  m_Name: event:/Interactables/Radio Station
   m_EditorClassIdentifier: 
-  Path: event:/Music/MUS_LiftMusic
+  Path: event:/Interactables/Radio Station
   Guid:
-    Data1: 1136704505
-    Data2: 1228471563
-    Data3: 335731857
-    Data4: -1458659122
+    Data1: -1284853857
+    Data2: 1279602452
+    Data3: 1660743820
+    Data4: -1969025494
   Banks:
   - {fileID: -6330288652659186577}
   IsStream: 1
@@ -401,10 +401,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Interact/Lift/INT_LiftDoorOpen
   Guid:
-    Data1: 1496718655
-    Data2: 1077380455
-    Data3: 10011566
-    Data4: -392340043
+    Data1: -2014691020
+    Data2: 1318977521
+    Data3: 1244236687
+    Data4: 595743019
   Banks:
   - {fileID: 2796520628372646022}
   IsStream: 0
@@ -853,23 +853,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/GroundMaterial
+  m_Name: parameter:/Enemy Proximety
   m_EditorClassIdentifier: 
-  Name: GroundMaterial
-  StudioPath: parameter:/GroundMaterial
+  Name: Enemy Proximety
+  StudioPath: parameter:/Music/Enemy Proximety
   Min: 0
-  Max: 3
+  Max: 20
   Default: 0
   ID:
-    data1: 1388210885
-    data2: 461686580
-  Type: 2
+    data1: 533873593
+    data2: 3478576879
+  Type: 0
   IsGlobal: 1
-  Labels:
-  - MetalHeavy
-  - MetalLight
-  - Glass
-  - Fabric
+  Labels: []
   Exists: 1
 --- !u!114 &1842648296378430613
 MonoBehaviour:
@@ -1002,24 +998,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/PLY_FootstepLoop/MovementState
+  m_Name: parameter:/MusicVolume
   m_EditorClassIdentifier: 
-  Name: MovementState
-  StudioPath: 
+  Name: MusicVolume
+  StudioPath: parameter:/MusicVolume
   Min: 0
-  Max: 2
-  Default: 1
+  Max: 100
+  Default: 50
   ID:
-    data1: 2507110007
-    data2: 1639301689
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Creeping
-  - Walking
-  - Running
+    data1: 186534926
+    data2: 2727883536
+  Type: 0
+  IsGlobal: 1
+  Labels: []
   Exists: 1
---- !u!114 &3512617322059358031
+--- !u!114 &3869495856767933613
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1029,16 +1022,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/AMB_Main/AmbienceIntensity
+  m_Name: parameter:/MusicMaster/Enemy Proximety
   m_EditorClassIdentifier: 
-  Name: AmbienceIntensity
+  Name: Enemy Proximety
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 20
   Default: 0
   ID:
-    data1: 2436229649
-    data2: 2950550613
+    data1: 533873593
+    data2: 3478576879
   Type: 0
   IsGlobal: 1
   Labels: []
@@ -1052,8 +1045,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/ReverbZoneB
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicMaster/Music Area 3
   m_EditorClassIdentifier: 
   Path: snapshot:/ReverbZoneB
   Guid:
@@ -1080,20 +1073,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/FX_AirCon
+  m_Name: event:/Music/MusicMaster
   m_EditorClassIdentifier: 
-  Path: event:/FX/FX_AirCon
+  Path: event:/Music/MusicMaster
   Guid:
-    Data1: 476959372
-    Data2: 1279075110
-    Data3: 2085503137
-    Data4: -1519035654
+    Data1: 505208879
+    Data2: 1178654647
+    Data3: -548308295
+    Data4: 1463359353
   Banks:
   - {fileID: -8932745394589793426}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 4808661813045436883}
+  - {fileID: 839671826458998526}
+  - {fileID: 8344931048396529139}
+  - {fileID: 8578299565268262916}
+  - {fileID: 3869495856767933613}
+  - {fileID: 6191272311913659259}
   MinDistance: 1
   MaxDistance: 25
   Length: 12351
@@ -1107,16 +1106,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/AmbienceIntensity
+  m_Name: parameter:/MusicMaster/MusicVolume
   m_EditorClassIdentifier: 
-  Name: AmbienceIntensity
-  StudioPath: parameter:/AmbienceIntensity
+  Name: MusicVolume
+  StudioPath: 
   Min: 0
-  Max: 2
-  Default: 0
+  Max: 100
+  Default: 50
   ID:
-    data1: 2436229649
-    data2: 2950550613
+    data1: 186534926
+    data2: 2727883536
   Type: 0
   IsGlobal: 1
   Labels: []
@@ -1255,8 +1254,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/AMB_Main
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicMaster/Music Area 2
   m_EditorClassIdentifier: 
   Path: event:/Ambience/AMB_Main
   Guid:
@@ -1340,17 +1339,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/LiftMusicDucking
+  m_Name: parameter:/MusicMaster/Music Area 1
   m_EditorClassIdentifier: 
-  Name: LiftMusicDucking
-  StudioPath: parameter:/LiftMusicDucking
+  Name: Music Area 1
+  StudioPath: 
   Min: 0
   Max: 1
   Default: 0
   ID:
-    data1: 4210304514
-    data2: 1922065804
+    data1: 2416438347
+    data2: 2012754621
   Type: 0
-  IsGlobal: 1
+  IsGlobal: 0
   Labels: []
   Exists: 1

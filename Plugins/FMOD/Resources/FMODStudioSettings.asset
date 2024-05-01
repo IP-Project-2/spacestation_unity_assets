@@ -380,8 +380,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/FMOD/IP2_spaceship_fmod/IP2_spaceship_fmod.fspro
-  sourceBankPath: Assets/FMOD/IP2_spaceship_fmod/Build
+  sourceProjectPath: ../SpacestationFMODMusic/SpacestationFMODMusic.fspro
+  sourceBankPath: ../SpacestationFMODMusic/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 1
   ShowBankRefreshWindow: 0
@@ -403,8 +403,16 @@ MonoBehaviour:
   RealChannelSettings: []
   Plugins: []
   MasterBanks:
+  - Evies_Master
   - Jamie_Master
   Banks:
+  - Evies_Dialogue_CN
+  - Evies_Dialogue_EN
+  - Evies_Dialogue_JP
+  - Evies_Music
+  - Evies_SFX
+  - Evies_Vehicles
+  - Evies_VO
   - Jamie_Ambience
   - Jamie_FX
   - Jamie_Interact
