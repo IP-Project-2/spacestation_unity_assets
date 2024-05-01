@@ -60,7 +60,7 @@
 			<destination>{16062e87-4c30-46d6-a2ac-efc4a76eb69c}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{d13eaecd-e670-4d5d-9a2e-aab3df09cc2b}</destination>
+			<destination>{5b51ae72-0259-4352-be79-d55e7426c1c6}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{af1fefc3-0a47-473f-b38c-61445679b4f9}" />
@@ -92,6 +92,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{4fbaf715-3712-4c5d-9a36-3e78a1eeb6ea}">
+		<property name="pitch">
+			<value>-4.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{a94c4c18-1dcb-43f0-9d03-4c798cd6df38}</destination>
 		</relationship>
@@ -195,6 +198,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{f1176fec-e746-4856-8322-d5f651b78a46}">
+		<property name="volume">
+			<value>-6.5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -264,6 +270,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{a94c4c18-1dcb-43f0-9d03-4c798cd6df38}">
 		<relationship name="effects">
+			<destination>{1116ed67-f315-46e1-8fd6-4e01f4f9fb49}</destination>
 			<destination>{56d163e7-d1b1-4ce6-a153-f9015eadfa63}</destination>
 			<destination>{a6c980f7-989f-4f8f-bb47-2162c2274f41}</destination>
 		</relationship>
@@ -348,6 +355,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{a72c94a6-4bc3-4341-b36b-f9451900ba73}">
 		<relationship name="effects">
+			<destination>{3fde56aa-026d-48a9-9640-7a3c5daf3d68}</destination>
 			<destination>{9346cf79-0eb0-46f6-ab74-3bf9353b17fe}</destination>
 			<destination>{845a3ab9-e109-494f-8280-4d2977669b03}</destination>
 			<destination>{6d77a8a8-77e6-46cf-8a66-974b07b24a61}</destination>
@@ -380,6 +388,14 @@
 	<object class="EventCondition" id="{ff8e314c-e5db-4f37-b225-3f37760ef8b3}">
 		<property name="eventState">
 			<value>1</value>
+		</property>
+	</object>
+	<object class="SFXReverbEffect" id="{1116ed67-f315-46e1-8fd6-4e01f4f9fb49}">
+		<property name="decayTime">
+			<value>240</value>
+		</property>
+		<property name="wetLevel">
+			<value>-1</value>
 		</property>
 	</object>
 	<object class="PluginEffect" id="{56d163e7-d1b1-4ce6-a153-f9015eadfa63}">
@@ -513,6 +529,11 @@
 			<value>1</value>
 		</property>
 	</object>
+	<object class="DistortionEffect" id="{3fde56aa-026d-48a9-9640-7a3c5daf3d68}">
+		<property name="level">
+			<value>0.359999985</value>
+		</property>
+	</object>
 	<object class="MultibandEqEffect" id="{9346cf79-0eb0-46f6-ab74-3bf9353b17fe}">
 		<property name="filterTypeA">
 			<value>7</value>
@@ -524,7 +545,7 @@
 			<value>158.799927</value>
 		</property>
 		<property name="frequencyC">
-			<value>250.50174</value>
+			<value>379.118347</value>
 		</property>
 		<property name="qualityA">
 			<value>1.76185262</value>
@@ -533,7 +554,7 @@
 			<value>-2.24268532</value>
 		</property>
 		<property name="gainC">
-			<value>4.5178771</value>
+			<value>3.47779155</value>
 		</property>
 	</object>
 	<object class="DistortionEffect" id="{845a3ab9-e109-494f-8280-4d2977669b03}">
@@ -552,25 +573,25 @@
 			<value>8</value>
 		</property>
 		<property name="frequencyA">
-			<value>277.844482</value>
+			<value>172.521454</value>
 		</property>
 		<property name="frequencyC">
 			<value>261.100159</value>
 		</property>
 		<property name="frequencyE">
-			<value>4193.3999</value>
+			<value>1793.24646</value>
 		</property>
 		<property name="qualityA">
 			<value>1.76185262</value>
 		</property>
 		<property name="gainA">
-			<value>-7.96316338</value>
+			<value>-2.24268532</value>
 		</property>
 		<property name="gainC">
 			<value>-6.92307663</value>
 		</property>
 		<property name="gainE">
-			<value>-2.76273155</value>
+			<value>-3.28277397</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{9bac2e88-2856-4aff-8e02-b01c510365d3}" />
@@ -598,7 +619,7 @@
 			<value>38.081353211009166</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>2</value>
 		</property>
 		<property name="curveShape">
 			<value>0.384477854</value>
@@ -612,7 +633,7 @@
 			<value>40.961628440366965</value>
 		</property>
 		<property name="value">
-			<value>-20</value>
+			<value>-17.9999981</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{0531a5f6-7c14-4964-b60e-e158fb7b7b52}">
@@ -620,7 +641,7 @@
 			<value>0.5</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>2</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{5da89209-b2e1-4211-b24f-0aa029b81ddc}">
@@ -628,7 +649,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-18</value>
+			<value>-15.999999</value>
 		</property>
 		<property name="curveShape">
 			<value>-0.165958211</value>
@@ -639,7 +660,7 @@
 			<value>Gain</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-9</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,-80.000000)(1.000000,24.000000)}</value>
@@ -650,7 +671,7 @@
 			<value>Spread</value>
 		</property>
 		<property name="value">
-			<value>9.99999975e-06</value>
+			<value>360</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,360.000000)}</value>
@@ -707,7 +728,6 @@
 		<property name="name">
 			<value>Attenuation Ran</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-6</value>
 		</property>
@@ -716,7 +736,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -742,7 +761,7 @@
 			<value>Near-Field Gain</value>
 		</property>
 		<property name="value">
-			<value>1.00001001</value>
+			<value>0</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,9.000000)}</value>
@@ -752,7 +771,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>

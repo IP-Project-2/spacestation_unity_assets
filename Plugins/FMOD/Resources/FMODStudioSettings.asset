@@ -403,13 +403,13 @@ MonoBehaviour:
   RealChannelSettings: []
   Plugins: []
   MasterBanks:
-  - Master
+  - Jamie_Master
   Banks:
-  - Ambience
-  - FX
-  - Interact
-  - Music
-  - Player
+  - Jamie_Ambience
+  - Jamie_FX
+  - Jamie_Interact
+  - Jamie_Music
+  - Jamie_Player
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

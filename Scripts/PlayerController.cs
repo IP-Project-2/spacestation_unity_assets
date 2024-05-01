@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] float creepSpeedScale = 0.5f;
     [SerializeField] float sprintSpeedScale = 2.0f;
 
+    const float TERMINAL_VELOCITY = 50.0f;
     [SerializeField] float gravity = -9.8f;
     [SerializeField] float jumpHeight = 2f;
 
@@ -18,15 +19,20 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] float groundDistance = 0.4f;
     [SerializeField] LayerMask groundMask;
     [SerializeField] bool isGrounded;
+    const float GROUND_TOLERANCE = 0.1f;
+    [SerializeField] bool withinGroundTolerance = false;
+
+    [SerializeField] float distanceFromGround = 0.0f;
+    [SerializeField] bool canLand = false;
 
     [SerializeField] FMODUnity.EventReference playerFootstepEvent;
     FMOD.Studio.EventInstance playerFootstep;
-    [SerializeField]
-    FMOD.Studio.PARAMETER_ID movementStateParamID;
+    [SerializeField] FMODUnity.EventReference playerLandEvent;
+    FMOD.Studio.EventInstance playerLand;
+    [SerializeField] FMOD.Studio.PARAMETER_ID movementStateParamID;
     float movementStateLast = 0.0f;
     const string FMOD_MOVEMENT_STATE = "MovementState";
     const string FMOD_GROUND_MATERIAL = "GroundMaterial";
-
 
     bool isSprintKeyDown = false;
     bool isCreepKeyDown = false;
@@ -41,6 +47,7 @@ public class PlayerController : MonoBehaviour {
     void Start() {
         charC.detectCollisions = true;
         playerFootstep = FMODUnity.RuntimeManager.CreateInstance(playerFootstepEvent);
+        playerLand = FMODUnity.RuntimeManager.CreateInstance(playerLandEvent);
 
         movementStateParamID = ParamFrom(playerFootstep, FMOD_MOVEMENT_STATE);
     }
@@ -64,17 +71,15 @@ public class PlayerController : MonoBehaviour {
         bool isMoving = Mathf.Abs(movement.x) > 0.0f
             || Mathf.Abs(movement.y) > 0.0f;
 
-        // isGrounded = Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask);
-
         if (isMoving) {
             UpdateSpeedKeys();
 
-            if (isFootstepStopped && isGrounded) {
+            if (isFootstepStopped && withinGroundTolerance) {
                 StartFootsteps();
                 isFootstepStopped = false;
             }
 
-            if (!isGrounded) {
+            if (!withinGroundTolerance) {
                 StopFootsteps();
                 isFootstepStopped = true;
             }
@@ -91,19 +96,20 @@ public class PlayerController : MonoBehaviour {
         // Create downward force to simulate gravity becasue we are not using a rigidbody
         if (enabledGravity) {
             if (isGrounded) {
-                if (Input.GetKey(KeyCode.Space)) 
+                if (Input.GetKey(KeyCode.Space))
                     velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-                else 
-                    velocity.y = -2.0f;
+                else
+                    velocity.y = gravity;
             }
             else {
-                velocity.y += gravity * Time.deltaTime * 2.0f;
+                velocity.y = Mathf.Max(velocity.y + gravity * Time.deltaTime * 2.0f, -TERMINAL_VELOCITY);
             }
             charC.Move(velocity * Time.deltaTime);
         }
 
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        Debug.Log(groundCheck.position);
+
+        groundCheck.position = transform.position + new Vector3(0.0f, -0.6f, 0.0f);
+        GroundRaycast();
 
         if (Input.GetKeyDown(KeyCode.E))
             InteractRaycast();
@@ -129,6 +135,48 @@ public class PlayerController : MonoBehaviour {
             if (hit.collider.TryGetComponent(out interaction))
                 interaction.Interact();
         }
+    }
+
+    void GroundRaycast() {
+        RaycastHit hit;
+        if (Physics.Raycast(groundCheck.position, Vector3.down, out hit, 10.0f, groundMask)) {
+            SetGroundMaterial(hit.collider.gameObject.tag);
+
+            distanceFromGround = hit.distance - groundDistance * 0.5f;
+
+            VerifyJumpDistance();
+
+            isGrounded = distanceFromGround <= 0.05f;
+            withinGroundTolerance = distanceFromGround <= GROUND_TOLERANCE;
+        }
+        else {
+            distanceFromGround = float.PositiveInfinity;
+            isGrounded = false;
+            withinGroundTolerance = false;
+            canLand = false;
+        }
+    }
+
+    void SetGroundMaterial(string colliderTag) {
+        string groundMaterial = colliderTag == "Stairs" ? "MetalLight" : "MetalHeavy";
+
+        FMODUnity.RuntimeManager
+            .StudioSystem
+            .setParameterByNameWithLabel(FMOD_GROUND_MATERIAL, groundMaterial);
+    }
+
+    void VerifyJumpDistance() {
+        if (distanceFromGround >= 0.3f)
+            canLand = true;
+        else if (canLand && withinGroundTolerance) {
+            PlayerLand();
+            canLand = false;
+        }
+    }
+
+    void PlayerLand() {
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(playerLand, this.transform);
+        playerLand.start();
     }
 
     void UpdateSpeedKeys() {

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{af3ec53b-0a22-4650-bdb6-9be99e2ddd5e}">
+		<property name="name">
+			<value>Jamie_FXVolume</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2924c35d-c43b-4e95-b153-f2a984cd213e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{fc24299a-5bc6-4e18-b84c-58253c690859}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{fc24299a-5bc6-4e18-b84c-58253c690859}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
